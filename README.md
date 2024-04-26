@@ -7,7 +7,7 @@
 
 - git init
 - git branch -M main
-- git remote add origin https://github.com/spk0626/baseERPApp-student-portal.git
+- git remote add origin https://github.com/spk0626/ERP-StudentPortal-Microservices.git
 
 - ***********************************************************************
 
