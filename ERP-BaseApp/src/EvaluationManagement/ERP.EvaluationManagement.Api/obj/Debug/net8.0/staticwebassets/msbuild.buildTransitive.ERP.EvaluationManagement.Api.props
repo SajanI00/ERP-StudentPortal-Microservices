@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\ERP.EvaluationManagement.Api.props" />
-</Project>

@@ -1,0 +1,6 @@
+@ERP.Announcements.APi_HostAddress = http://localhost:5068
+
+GET {{ERP.Announcements.APi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
