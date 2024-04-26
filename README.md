@@ -11,6 +11,7 @@
 
 - ***********************************************************************
 
+- git remote set-url origin https://github.com/spk0626/ERP-StudentPortal-Microservices.git
 - git status
 - git add .
 - git commit -m "first commit"
