@@ -23,10 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Authentication\ERP.Authentication.Jwt\ERP.Authentication.Jwt.csproj" />
     <ProjectReference Include="..\..\_Shared\ERP.Messaging.Core\ERP.Messaging.Core.csproj" />
     <ProjectReference Include="..\ERP.StudentRequests.Application\ERP.StudentRequests.Application.csproj" />
