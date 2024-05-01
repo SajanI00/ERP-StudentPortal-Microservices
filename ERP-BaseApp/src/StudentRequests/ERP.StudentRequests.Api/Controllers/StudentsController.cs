@@ -45,7 +45,7 @@ namespace ERP.StudentRequests.Api.Controllers
         }
 
         [HttpPut("")]
-        public async Task<IActionResult> UpdateStudentMethod([FromBody] CreateStudentRequest student)
+        public async Task<IActionResult> UpdateStudentMethod([FromBody] UpdateStudentRequest student)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
