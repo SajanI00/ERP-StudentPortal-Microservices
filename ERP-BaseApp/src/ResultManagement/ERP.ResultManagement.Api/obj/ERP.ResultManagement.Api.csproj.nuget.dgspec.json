@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj": {}
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj": {}
   },
   "projects": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj": {
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj",
+        "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj",
         "projectName": "ERP.ResultManagement.Api",
-        "projectPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj",
+        "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\ERP.ResultManagement.Api.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\obj\\",
+        "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,26 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"

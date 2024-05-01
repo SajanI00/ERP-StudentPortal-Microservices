@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.StudentRequests.Core\ERP.StudentRequests.Core.csproj" />
+    <ProjectReference Include="..\ERP.StudentRequests.DataService\ERP.StudentRequests.DataService.csproj" />
+  </ItemGroup>
+
 </Project>

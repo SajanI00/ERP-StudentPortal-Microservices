@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj": {}
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj": {}
   },
   "projects": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj": {
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj",
+        "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj",
         "projectName": "ERP.APIGateway",
-        "projectPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj",
+        "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\ERP.APIGateway.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\obj\\",
+        "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.APIGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Ocelot": {
               "target": "Package",
               "version": "[23.1.0, )"

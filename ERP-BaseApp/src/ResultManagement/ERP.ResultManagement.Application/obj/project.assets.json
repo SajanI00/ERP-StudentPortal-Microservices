@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\ERP.ResultManagement.Application.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\ERP.ResultManagement.Application.csproj",
       "projectName": "ERP.ResultManagement.Application",
-      "projectPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\ERP.ResultManagement.Application.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\ERP.ResultManagement.Application.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultManagement\\ERP.ResultManagement.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

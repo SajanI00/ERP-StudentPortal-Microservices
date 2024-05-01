@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jsR74I3DiQQppODcn5MhEhmo38WSG5qIp64MtWMO/1XY/J9q8heu08Y/e7uQbw2rZny/to0jlYKmJ/I9Ph7ajg==",
+  "dgSpecHash": "c+DweHY0I+k0kF1uH4t0auxdFS6Sepr2QSVNq0OnPe5Ys1CajdYXdYidS4bZtZdfHZ3azp7cJyfXyYT+JrK33w==",
   "success": true,
-  "projectFilePath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
+  "projectFilePath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

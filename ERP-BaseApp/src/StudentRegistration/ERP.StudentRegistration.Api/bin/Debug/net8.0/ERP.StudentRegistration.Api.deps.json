@@ -20,6 +20,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "Microsoft.EntityFrameworkCore.Design": "8.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.3",
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.3",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -404,6 +405,11 @@
             "assemblyVersion": "8.0.3.0",
             "fileVersion": "8.0.324.11510"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/8.0.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.3"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -904,7 +910,8 @@
       "ERP.Messaging.Core/1.0.0": {
         "dependencies": {
           "MassTransit": "8.1.3",
-          "MassTransit.RabbitMQ": "8.1.3"
+          "MassTransit.RabbitMQ": "8.1.3",
+          "Microsoft.EntityFrameworkCore": "8.0.3"
         },
         "runtime": {
           "ERP.Messaging.Core.dll": {}
@@ -1077,6 +1084,13 @@
       "sha512": "sha512-6DvYtnLdpViXgA5F2Z/cIJfWIv31Eby5j2YqUzr+sgJulKtCX+ypvmfooXlYnCwJDlcmIaMY27TMnlrCcUvZmA==",
       "path": "microsoft.entityframeworkcore.sqlite.core/8.0.3",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.8.0.3.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/8.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jKczLbj13jY6TvYsXgAYqfhkIow6VdqumCv0m8EvNr3vU1+nJ6LKoG+6pPKnkVOHycXHGy5DEhH0GN0ldmx7Kw==",
+      "path": "microsoft.entityframeworkcore.tools/8.0.3",
+      "hashPath": "microsoft.entityframeworkcore.tools.8.0.3.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",

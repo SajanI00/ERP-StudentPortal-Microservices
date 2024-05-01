@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj": {}
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj": {}
   },
   "projects": {
-    "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj": {
+    "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
+        "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
         "projectName": "ERP.ResultAnalysis.DataService",
-        "projectPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
+        "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\6th Sem\\Software Project\\Ruhuna-ERP-APP\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\obj\\",
+        "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

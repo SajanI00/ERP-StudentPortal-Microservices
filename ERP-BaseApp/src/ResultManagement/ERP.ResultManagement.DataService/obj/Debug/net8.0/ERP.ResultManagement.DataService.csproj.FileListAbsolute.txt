@@ -34,3 +34,18 @@ D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.Da
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\refint\ERP.ResultManagement.DataService.dll
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.pdb
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ref\ERP.ResultManagement.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\bin\Debug\net8.0\ERP.ResultManagement.DataService.deps.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\bin\Debug\net8.0\ERP.ResultManagement.DataService.runtimeconfig.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\bin\Debug\net8.0\ERP.ResultManagement.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\bin\Debug\net8.0\ERP.ResultManagement.DataService.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.csproj.AssemblyReference.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.GeneratedMSBuildEditorConfig.editorconfig
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.AssemblyInfoInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.AssemblyInfo.cs
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.csproj.CoreCompileInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.sourcelink.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\refint\ERP.ResultManagement.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ERP.ResultManagement.DataService.genruntimeconfig.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultManagement\ERP.ResultManagement.DataService\obj\Debug\net8.0\ref\ERP.ResultManagement.DataService.dll
