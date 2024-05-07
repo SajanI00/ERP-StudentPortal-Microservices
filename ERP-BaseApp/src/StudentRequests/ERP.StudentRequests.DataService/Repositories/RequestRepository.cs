@@ -12,18 +12,20 @@ namespace ERP.StudentRequests.DataService.Repositories
         {
         }
 
-        public async Task<Request?> GetStudentRequestAsync(Guid studentId)
+        public async Task<IEnumerable<Request>> GetStudentRequestAsync(Guid studentId)
         {
             try
             {
-                return await _dbSet.FirstOrDefaultAsync(s => s.StudentId == studentId);
+                return await _dbSet
+                    .Where(s => s.StudentId == studentId)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "{Repo} GetStudentRequestAsync function error", typeof(RequestRepository));
+                return Enumerable.Empty<Request>();
             }
 
-            return null;
 
         }
 

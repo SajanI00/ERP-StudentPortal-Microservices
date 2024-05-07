@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Iyhe+JvQFU5ME5Gd1Pkh5vXg27PDwazlWby7Vvp/ioLCXaPcfla2DrIFpeBryp4f5LXj8fRisoHoGK0wxvjzw==",
+  "dgSpecHash": "J+UmSXMpNf8nNUDXs8F8zd/ncA3hYh0wBWPjBivgqGpjGix5LRYiJNh//kB9XJaW/2lvjsW1MD+a24NyHpExpA==",
   "success": true,
-  "projectFilePath": "D:\\6th Sem\\Software Project\\Main project\\project 4\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj",
+  "projectFilePath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

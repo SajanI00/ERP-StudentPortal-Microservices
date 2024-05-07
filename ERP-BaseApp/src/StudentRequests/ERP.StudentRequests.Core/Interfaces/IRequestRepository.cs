@@ -5,7 +5,7 @@ namespace ERP.StudentRequests.Core.Interfaces
 {
     public interface IRequestRepository : IGenericRepository<Request>
     {
-        Task<Request?> GetStudentRequestAsync(Guid studentId);
+        Task<IEnumerable<Request>> GetStudentRequestAsync(Guid studentId);
 
         Task<Request?> GetLecturerRequestAsync(Guid lecturerId);
     }

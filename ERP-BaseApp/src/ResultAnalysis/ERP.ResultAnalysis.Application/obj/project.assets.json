@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 4\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
       "projectName": "ERP.ResultAnalysis.Application",
-      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 4\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\ERP.ResultAnalysis.Application.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 4\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

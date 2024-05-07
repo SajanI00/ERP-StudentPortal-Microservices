@@ -24,10 +24,10 @@ namespace ERP.StudentRequests.Api.Controllers
         {
             var studentRequests = await _unitOfWork.Requests.GetStudentRequestAsync(studentId);
 
-            if (studentRequests == null)
+            if (studentRequests == null || !studentRequests.Any())
                 return NotFound("Requests not found");
 
-            var result = _mapper.Map<GetReqLetterResponse>(studentRequests);
+            var result = _mapper.Map<IEnumerable<GetReqLetterResponse>>(studentRequests);
 
             return Ok(result);
 
