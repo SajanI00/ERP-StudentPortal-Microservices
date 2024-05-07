@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Announcements.Core\ERP.Announcements.Core.csproj" />
+  </ItemGroup>
+
 </Project>
