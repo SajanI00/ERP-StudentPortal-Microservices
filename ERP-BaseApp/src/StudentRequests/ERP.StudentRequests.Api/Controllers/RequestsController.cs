@@ -4,17 +4,22 @@ using ERP.StudentRequests.Core.Interfaces;
 using ERP.StudentRequests.Core.DTOs.Request;
 using ERP.StudentRequests.Core.DTOs.Response;
 using ERP.StudentRequests.Core.Entity;
+using ERP.StudentRequests.Api.Services.Publishers.Interfaces;
+using ERP.StudentRequests.Core.Contracts;
 
 namespace ERP.StudentRequests.Api.Controllers
 {
     public class RequestsController : BaseController
     {
 
+        public readonly IRequestNotificationPublisherService _requestService;
+     
         public RequestsController(
             IUnitOfWork unitOfWork,
-            IMapper mapper) : base(unitOfWork, mapper)
+            IMapper mapper,
+            IRequestNotificationPublisherService requestService) : base(unitOfWork, mapper)
         {
-
+            _requestService = requestService;
         }
 
 
@@ -59,12 +64,22 @@ namespace ERP.StudentRequests.Api.Controllers
             await _unitOfWork.Requests.Add(result);
             await _unitOfWork.CompleteAsync();
 
+            RequestCreatedNotificationRecord requestRecord = new RequestCreatedNotificationRecord
+               (RequestId: result.Id,
+                Topic: result.Topic,
+                AddedDate: result.AddedDate,
+                StudentName: result.StudentName,
+                LecturerName: result.LecturerName
+               );
+
+            //await _requestService.SendNotification(requestRecord);
+
             return CreatedAtAction(nameof(GetStudentRequests), new { studentId = result.StudentId }, result);
 
         }
 
         [HttpPut("")]
-        public async Task<IActionResult> UpdateStudentRequest([FromBody] UpdateReqLetterRequest request)
+        public async Task<IActionResult> UpdateStudentRequestMethod([FromBody] UpdateReqLetterRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest();

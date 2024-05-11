@@ -15,6 +15,7 @@ namespace ERP.StudentRequests.Api.MappingProfiles
                 dest => dest.StudentId,
                 opt => opt.MapFrom(src => src.Id));
 
+
             CreateMap<Lecturer, GetLecturerResponse>()
                 .ForMember(
                 dest => dest.LecturerId,

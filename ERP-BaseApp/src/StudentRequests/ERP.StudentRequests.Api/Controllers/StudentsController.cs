@@ -9,7 +9,9 @@ namespace ERP.StudentRequests.Api.Controllers
 {
     public class StudentsController : BaseController
     {
-        public StudentsController(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+        public StudentsController(
+            IUnitOfWork unitOfWork, 
+            IMapper mapper) : base(unitOfWork, mapper)
         {
         }
 

@@ -110,6 +110,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRegistration.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.Announcements.DataService", "src\Announcements\ERP.Announcements.DataService\ERP.Announcements.DataService.csproj", "{156B1B1F-1A75-485C-BF89-2FE4CB0264FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F4CF1411-F9AC-45A2-BB77-7394DF3596FD}"
+	ProjectSection(SolutionItems) = preProject
+		src\StudentRequests\Infrastructure\docker-compose.yml = src\StudentRequests\Infrastructure\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{FADA3AB0-B471-40D1-B3A8-21986BDBF882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.Core.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Core.Tests\ERP.StudentRequests.Core.Tests.csproj", "{5D3A3E81-E069-4AA3-BD36-28A445C97C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.DataService.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.DataService.Tests\ERP.StudentRequests.DataService.Tests.csproj", "{9C1D8A38-9717-4884-9F9E-25A5481575FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.Api.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Api.Tests\ERP.StudentRequests.Api.Tests.csproj", "{6A7BFC5C-C5DC-4083-8038-3863719239BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -272,6 +285,18 @@ Global
 		{156B1B1F-1A75-485C-BF89-2FE4CB0264FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{156B1B1F-1A75-485C-BF89-2FE4CB0264FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{156B1B1F-1A75-485C-BF89-2FE4CB0264FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -316,6 +341,11 @@ Global
 		{1FF95352-5DB5-4F35-A1F5-233614C3D47C} = {473E2D64-C074-4E97-BF7A-062AC6BCE8A8}
 		{CC2EAA8B-2741-4660-B986-F41E4A496F2F} = {473E2D64-C074-4E97-BF7A-062AC6BCE8A8}
 		{156B1B1F-1A75-485C-BF89-2FE4CB0264FA} = {967A94B1-ED47-4D97-9F6D-CBEF93819966}
+		{F4CF1411-F9AC-45A2-BB77-7394DF3596FD} = {80CF0964-B529-4450-AF2A-4B4ED25D30B7}
+		{FADA3AB0-B471-40D1-B3A8-21986BDBF882} = {80CF0964-B529-4450-AF2A-4B4ED25D30B7}
+		{5D3A3E81-E069-4AA3-BD36-28A445C97C03} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
+		{9C1D8A38-9717-4884-9F9E-25A5481575FB} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
+		{6A7BFC5C-C5DC-4083-8038-3863719239BC} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFC59B45-8A1B-45B0-AA0C-9897743CD009}

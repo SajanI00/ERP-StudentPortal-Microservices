@@ -34,18 +34,6 @@ D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\o
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\refint\ERP.ResultAnalysis.Core.dll
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
 D:\repos\Ruhuna-ERP-APP\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ref\ERP.ResultAnalysis.Core.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.deps.json
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.AssemblyInfoInputs.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.AssemblyInfo.cs
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.csproj.CoreCompileInputs.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.sourcelink.json
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\refint\ERP.ResultAnalysis.Core.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ref\ERP.ResultAnalysis.Core.dll
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.deps.json
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.dll
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
@@ -58,3 +46,14 @@ D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservic
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\refint\ERP.ResultAnalysis.Core.dll
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ref\ERP.ResultAnalysis.Core.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.deps.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\bin\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.AssemblyInfoInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.AssemblyInfo.cs
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.csproj.CoreCompileInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\refint\ERP.ResultAnalysis.Core.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ERP.ResultAnalysis.Core.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ResultAnalysis\ERP.ResultAnalysis.Core\obj\Debug\net8.0\ref\ERP.ResultAnalysis.Core.dll

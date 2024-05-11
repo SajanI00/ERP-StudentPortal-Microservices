@@ -8,6 +8,8 @@ namespace ERP.StudentRequests.Core.DTOs.Request
 {
     public class UpdateReqLetterRequest
     {
+        public Guid RequestId { get; set; }
+
         public Guid StudentId { get; set; }
 
         public Guid LecturerId { get; set; }

@@ -70,24 +70,6 @@ D:\6th Sem\Software Project\Ruhuna-ERP-APP\ERP-BaseApp\src\ModuleRegistration\ER
 D:\6th Sem\Software Project\Ruhuna-ERP-APP\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
 D:\6th Sem\Software Project\Ruhuna-ERP-APP\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.genruntimeconfig.cache
 D:\6th Sem\Software Project\Ruhuna-ERP-APP\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ref\ERP.ModuleRegistration.DataService.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.deps.json
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.runtimeconfig.json
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.Core.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.Core.pdb
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.AssemblyReference.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.GeneratedMSBuildEditorConfig.editorconfig
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.AssemblyInfoInputs.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.AssemblyInfo.cs
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.CoreCompileInputs.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.sourcelink.json
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.CopyComplete
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\refint\ERP.ModuleRegistration.DataService.dll
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.genruntimeconfig.cache
-D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ref\ERP.ModuleRegistration.DataService.dll
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.deps.json
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.runtimeconfig.json
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.dll
@@ -106,3 +88,20 @@ D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservic
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.genruntimeconfig.cache
 D:\6th Sem\Software Project\Main project\project 4\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ref\ERP.ModuleRegistration.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.deps.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.runtimeconfig.json
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.Core.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\bin\Debug\net8.0\ERP.ModuleRegistration.Core.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.AssemblyReference.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.GeneratedMSBuildEditorConfig.editorconfig
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.AssemblyInfoInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.AssemblyInfo.cs
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.CoreCompileInputs.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.csproj.CopyComplete
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\refint\ERP.ModuleRegistration.DataService.dll
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.pdb
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ERP.ModuleRegistration.DataService.genruntimeconfig.cache
+D:\6th Sem\Software Project\ERP-StudentPortal-Microservices\ERP-BaseApp\src\ModuleRegistration\ERP.ModuleRegistration.DataService\obj\Debug\net8.0\ref\ERP.ModuleRegistration.DataService.dll
