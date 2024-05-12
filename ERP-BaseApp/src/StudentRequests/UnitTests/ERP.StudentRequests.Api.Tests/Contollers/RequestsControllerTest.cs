@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ERP.StudentRequests.Core.Contracts;
 
-namespace ERP.StudentRequests.Api.UnitTests.Controllers
+namespace ERP.StudentRequests.Api.Tests.Contollers
 {
     public class RequestsControllerTest
     {
@@ -139,7 +139,7 @@ namespace ERP.StudentRequests.Api.UnitTests.Controllers
         public async Task AddStudentRequest_ReturnsBadRequest_WhenModelStateIsInvalid()
         {
             // Arrange
-            var createRequest = _fixture.Build<CreateReqLetterRequest>().Without(x => x.Topic).Create(); // Invalid request
+            var createRequest = _fixture.Build<CreateReqLetterRequest>().Without(x => x.Topic).Create(); // for a invalid request
 
             _controller.ModelState.AddModelError("Topic", "Topic is required");
 
@@ -174,7 +174,7 @@ namespace ERP.StudentRequests.Api.UnitTests.Controllers
         public async Task UpdateStudentRequest_ReturnsBadRequest_WhenModelStateIsInvalid()
         {
             // Arrange
-            var updateRequest = _fixture.Build<UpdateReqLetterRequest>().Without(x => x.Topic).Create(); // Invalid request
+            var updateRequest = _fixture.Build<UpdateReqLetterRequest>().Without(x => x.Topic).Create(); //for a invalid request
 
             _controller.ModelState.AddModelError("Topic", "Topic is required");
 

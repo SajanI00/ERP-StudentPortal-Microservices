@@ -8,8 +8,8 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace ERP.StudentRequests.Api.UnitTests.Controllers
-{
+namespace ERP.StudentRequests.Api.Tests.Contollers { 
+
     public class LecturersControllerTest
     {
         private readonly Mock<IUnitOfWork> _mockUnitOfWork;

@@ -8,7 +8,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace ERP.StudentRequests.Api.UnitTests.Controllers
+namespace ERP.StudentRequests.Api.Tests.Contollers
 {
     public class StudentsControllerTest
     {
@@ -28,27 +28,34 @@ namespace ERP.StudentRequests.Api.UnitTests.Controllers
         [Fact]
         public async Task GetStudentMethod_ShouldReturnOk_WhenStudentFound()
         {
-            // Arrange
-            var studentId = Guid.NewGuid();
+            // Arrange : setting up the necessary conditions for the test
+            var studentId = Guid.NewGuid(); // generating a random student ID for testing
+
+                         // creating a mock student entity with the generated student ID
             var studentEntity = _fixture.Build<Student>()
                                         .With(s => s.Id, studentId)
                                         .Create();
+
+                        // creating a mock response object with the student ID match to the the generated ID
             var studentResponse = _fixture.Build<GetStudentResponse>()
                                           .With(r => r.StudentId, studentId)
                                           .Create();
 
+                       // setting up the mock UnitofWork to return the mock student entity when GetById is called with the generated student ID
             _mockUnitOfWork.Setup(uow => uow.Students.GetById(studentId))
                            .ReturnsAsync(studentEntity);
+
+                      // setting up the mock mapper to return the mock student response when mapping the mock student entity
             _mockMapper.Setup(mapper => mapper.Map<GetStudentResponse>(studentEntity))
                        .Returns(studentResponse);
 
-            // Act
+            // Act :  invoke the method we want to test
             var result = await _controller.GetStudentMethod(studentId);
 
-            // Assert
+            // Assert : verify that the method under test behaves as expected
             result.Should().BeOfType<OkObjectResult>();
             var okResult = result as OkObjectResult;
-            okResult.Value.Should().BeEquivalentTo(studentResponse);
+            okResult.Value.Should().BeEquivalentTo(studentResponse); // verifying that the returned value match the mock student response
         }
 
 
@@ -56,16 +63,31 @@ namespace ERP.StudentRequests.Api.UnitTests.Controllers
         public async Task GetStudentMethod_ReturnsNotFound_WhenStudentNotFound()
         {
             // Arrange
+
+                        // the behavior of the mockUnitOfWork is set up
+                       // tell it that when the GetStudentRequestAsync method is called with the specified studentId, it should return null
             var studentId = Guid.NewGuid();
 
             _mockUnitOfWork.Setup(uow => uow.Students.GetById(studentId))
                            .ReturnsAsync((Student)null);
 
             // Act
+                       //call the GetStudentRequests method of the controller and pass the studentId
+                      //this simulates invoking the action method
             var result = await _controller.GetStudentMethod(studentId);
 
             // Assert
+                     //we expect the result to be of type NotFoundObjectResult.
+                    //this ensures that when the requests are not found, the controller returns a 404 Not Found status code
             result.Should().BeOfType<NotFoundResult>();
+
+                   //cast the result to NotFoundObjectResult to access its properties
+            var notFoundResult = result as NotFoundObjectResult;
+
+                  //we assert that the value of the NotFoundObjectResult should be "Requests not found"
+                  //this verifies that correct error message is returned when requests are not found
+            notFoundResult.Value.Should().Be("Requests not found");
+
         }
 
 
