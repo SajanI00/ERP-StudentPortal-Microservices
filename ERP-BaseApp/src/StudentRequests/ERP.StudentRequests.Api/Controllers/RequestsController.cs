@@ -72,7 +72,7 @@ namespace ERP.StudentRequests.Api.Controllers
                 LecturerName: result.LecturerName
                );
 
-            //await _requestService.SendNotification(requestRecord);
+            await _requestService.SendNotification(requestRecord);
 
             return CreatedAtAction(nameof(GetStudentRequests), new { studentId = result.StudentId }, result);
 

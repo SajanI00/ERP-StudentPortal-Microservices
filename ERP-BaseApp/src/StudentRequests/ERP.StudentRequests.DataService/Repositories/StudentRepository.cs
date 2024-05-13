@@ -65,9 +65,9 @@ namespace ERP.StudentRequests.DataService.Repositories
                 result.UpdatedDate = DateTime.UtcNow;
                 result.Name = student.Name;
                 result.RegNo = student.RegNo;
-                result.Batch = student.Batch;
-                result.Degree = student.Degree;
-                result.Semester = student.Semester;
+                //result.Batch = student.Batch;
+                //result.Degree = student.Degree;
+                //result.Semester = student.Semester;
 
                 return true;
 

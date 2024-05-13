@@ -66,8 +66,8 @@ builder.Services.AddMassTransit(conf =>
 {
     conf.UsingRabbitMq((ctx, cfg) => {
         cfg.Host("localhost", "/", h => {
-            h.Username("guest");
-            h.Password("guest");
+            h.Username("user");
+            h.Password("password");
         });
     });
 });

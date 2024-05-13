@@ -81,7 +81,9 @@ public class StudentRegistrationController : BaseController
         (StudentId: result.Id,
             RegistrationNumber: result.RegistrationNumber,
             StudentFullName: $"{result.FirstName} {result.LastName}",
-            DateOfBirth: result.DateOfBirth
+            DateOfBirth: result.DateOfBirth,
+            AddedDate: result.AddedDate,
+            Status: result.Status
         );
 
         await _studentService.SentNotification(studentRecord);
@@ -104,7 +106,9 @@ public class StudentRegistrationController : BaseController
         (StudentId: result.Id,
             RegistrationNumber: result.RegistrationNumber,
             StudentFullName: $"{result.FirstName} {result.LastName}",
-            DateOfBirth: result.DateOfBirth
+            DateOfBirth: result.DateOfBirth,
+            AddedDate: result.AddedDate,
+            Status: result.Status
         );
 
         await _studentService.SentNotification(studentRecord);

@@ -1,5 +1,4 @@
-﻿using ERP.Messaging.Core.Student;
-using ERP.StudentRequests.Core.Contracts;
+﻿using ERP.StudentRequests.Core.Contracts;
 using MassTransit;
 
 namespace ERP.StudentRequests.Api.Services.Consumers

@@ -117,11 +117,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{FADA3AB0-B471-40D1-B3A8-21986BDBF882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.Core.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Core.Tests\ERP.StudentRequests.Core.Tests.csproj", "{5D3A3E81-E069-4AA3-BD36-28A445C97C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.Core.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Core.Tests\ERP.StudentRequests.Core.Tests.csproj", "{5D3A3E81-E069-4AA3-BD36-28A445C97C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.DataService.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.DataService.Tests\ERP.StudentRequests.DataService.Tests.csproj", "{9C1D8A38-9717-4884-9F9E-25A5481575FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.DataService.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.DataService.Tests\ERP.StudentRequests.DataService.Tests.csproj", "{9C1D8A38-9717-4884-9F9E-25A5481575FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.StudentRequests.Api.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Api.Tests\ERP.StudentRequests.Api.Tests.csproj", "{6A7BFC5C-C5DC-4083-8038-3863719239BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.Api.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Api.Tests\ERP.StudentRequests.Api.Tests.csproj", "{6A7BFC5C-C5DC-4083-8038-3863719239BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ProjectInfrastructure", "_ProjectInfrastructure", "{96C93B25-18DE-45E1-AF56-F8E4E7ECD6C7}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

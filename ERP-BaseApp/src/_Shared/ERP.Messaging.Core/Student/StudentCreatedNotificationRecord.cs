@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ERP.Messaging.Core.Student
 {
@@ -11,6 +7,8 @@ namespace ERP.Messaging.Core.Student
         Guid StudentId,
         string StudentFullName,
         string RegistrationNumber,
+        int Status,
+        DateTime AddedDate,
         DateTime DateOfBirth  
      );
 }

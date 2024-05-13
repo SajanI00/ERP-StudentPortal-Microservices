@@ -22,7 +22,7 @@ namespace ERP.Messaging.Core.Service
 
         public  async Task SentNotification(StudentCreatedNotificationRecord student)
         {
-            _logger.LogInformation($"Driver Notification for {student.StudentFullName}");
+            _logger.LogInformation($"Student Notification for {student.StudentFullName}");
             await _bus.Publish(student);
         }
     }
