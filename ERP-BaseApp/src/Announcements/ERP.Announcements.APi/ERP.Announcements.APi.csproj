@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\_Shared\ERP.Messaging.Core\ERP.Messaging.Core.csproj" />
     <ProjectReference Include="..\ERP.Announcements.Application\ERP.Announcements.Application.csproj" />
     <ProjectReference Include="..\ERP.Announcements.Core\ERP.Announcements.Core.csproj" />
     <ProjectReference Include="..\ERP.Announcements.DataService\ERP.Announcements.DataService.csproj" />

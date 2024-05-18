@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ERP.Announcements.Api.Services.Publishers.Interfaces;
+using ERP.Announcements.Core.Contracts;
 using ERP.Announcements.Core.DTOs.Request;
 using ERP.Announcements.Core.DTOs.Response;
 using ERP.Announcements.Core.Entity;
@@ -9,8 +11,12 @@ namespace ERP.Announcements.Api.Controllers
 {
     public class AnnouncementController : BaseController
     {
-        public AnnouncementController(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper)
+        public readonly IAnnouncementNotificationPublisherService _announcementService;
+
+        public AnnouncementController(IUnitOfWork unitOfWork, IMapper mapper, IAnnouncementNotificationPublisherService announcementService) 
+            : base(unitOfWork, mapper)
         {
+            _announcementService = announcementService;
         }
 
         [HttpGet]
@@ -70,6 +76,16 @@ namespace ERP.Announcements.Api.Controllers
 
             await _unitOfWork.Announcements.Add(result);
             await _unitOfWork.CompleteAsync();
+
+            AnnouncementCreatedNotificationRecord announcementRecord = new AnnouncementCreatedNotificationRecord
+              (AnnouncementId: result.Id,
+               Text: result.Text,
+               AddedDate: result.AddedDate,
+               StudentGroupName: result.AnnouncementGroupName,
+               SenderName: result.SenderName
+              );
+
+            await _announcementService.SendNotification(announcementRecord);
 
             return CreatedAtAction(nameof(GetAnnouncementGroupAnnouncements), new { announcementGroupId = result.AnnouncementGroupId }, result);
 

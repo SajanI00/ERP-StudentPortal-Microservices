@@ -47,9 +47,6 @@ namespace ERP.Announcements.DataService.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid?>("StudentId")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -172,23 +169,11 @@ namespace ERP.Announcements.DataService.Migrations
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Batch")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Degree")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("RegNo")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Semester")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

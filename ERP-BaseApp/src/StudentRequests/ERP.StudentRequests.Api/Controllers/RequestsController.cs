@@ -13,7 +13,9 @@ namespace ERP.StudentRequests.Api.Controllers
     {
 
         public readonly IRequestNotificationPublisherService _requestService;
-     
+        private static readonly Guid FixedStudentId = new Guid("292dcf28-b173-4619-a509-3ac83c576c38");
+
+
         public RequestsController(
             IUnitOfWork unitOfWork,
             IMapper mapper,
@@ -37,6 +39,21 @@ namespace ERP.StudentRequests.Api.Controllers
             return Ok(result);
 
         }
+
+        [HttpGet]
+        [Route("Students/Requests")]
+        public async Task<IActionResult> GetOneStudentRequests()
+        {
+            var studentRequests = await _unitOfWork.Requests.GetStudentRequestAsync(FixedStudentId);
+
+            if (studentRequests == null || !studentRequests.Any())
+                return NotFound("Requests not found");
+
+            var result = _mapper.Map<IEnumerable<GetReqLetterResponse>>(studentRequests);
+
+            return Ok(result);
+        }
+
 
         [HttpGet]
         [Route("Lecturers/{lecturerId:guid}")]
