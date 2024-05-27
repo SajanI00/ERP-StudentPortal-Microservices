@@ -1,0 +1,61 @@
+﻿@using ERP_StudentRequests.Core.DTOs.Response;
+@inject NavigationManager NavigationManager
+
+
+
+<MudTable Items="@_requests">
+    <HeaderContent>
+        <MudTh>RequestId</MudTh>
+        <MudTh>Topic</MudTh> `
+        <MudTh>RequestType</MudTh>
+        <MudTh>LecturerName</MudTh>
+        <MudTh>Message</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Nr">@context.RequestId</MudTd>
+        <MudTd DataLabel="Sign">@context.Topic </MudTd>
+            <MudTd DataLabel="Name">@context.RequestType</MudTd>
+            <MudTd DataLabel="Name">@context.LecturerName</MudTd>
+            <MudTd DataLabel="Name">@context.Message</MudTd>
+        
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+
+@code {
+
+    private HttpClient Http = new HttpClient();
+
+
+    private List<GetReqLetterResponse> _requests = new List<GetReqLetterResponse>();
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _requests = await Http.GetFromJsonAsync<List<GetReqLetterResponse>>("https://localhost:7011/api/Requests/Students/Requests");
+
+        }catch(Exception ex)
+        {
+            _requests = null;
+        }
+       
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        //_students = (await ViewStudentsByNameUseCase.ExecuteAsync(SearchTerm)).ToList();
+    }   
+
+    
+    void Edit(int studentId)
+    {
+        NavigationManager.NavigateTo($"/editstudent/{studentId}");
+        
+    }
+
+}

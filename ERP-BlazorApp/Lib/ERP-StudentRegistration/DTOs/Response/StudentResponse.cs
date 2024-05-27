@@ -10,7 +10,7 @@ namespace ERP_StudentRegistration.DTOs.Response
     {
         public Guid StudentId { get; set; }
         public string FullName { get; set; } = string.Empty;
-        public string RegistrationNumber { get; set; }
+        public string RegistrationNumber { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         public DateTime RegisteredDate { get; set; }
     }

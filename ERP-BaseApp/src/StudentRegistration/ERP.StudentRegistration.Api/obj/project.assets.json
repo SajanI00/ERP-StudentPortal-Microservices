@@ -3899,11 +3899,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\ERP.StudentRegistration.Api.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\ERP.StudentRegistration.Api.csproj",
       "projectName": "ERP.StudentRegistration.Api",
-      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\ERP.StudentRegistration.Api.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\ERP.StudentRegistration.Api.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3920,20 +3920,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\Authentication\\ERP.Authentication.Jwt\\ERP.Authentication.Jwt.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\Authentication\\ERP.Authentication.Jwt\\ERP.Authentication.Jwt.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\Authentication\\ERP.Authentication.Jwt\\ERP.Authentication.Jwt.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\Authentication\\ERP.Authentication.Jwt\\ERP.Authentication.Jwt.csproj"
             },
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Application\\ERP.StudentRegistration.Application.csproj"
             },
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Core\\ERP.StudentRegistration.Core.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Core\\ERP.StudentRegistration.Core.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Core\\ERP.StudentRegistration.Core.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.Core\\ERP.StudentRegistration.Core.csproj"
             },
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj"
             },
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.Messaging.Core\\ERP.Messaging.Core.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.Messaging.Core\\ERP.Messaging.Core.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.Messaging.Core\\ERP.Messaging.Core.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\_Shared\\ERP.Messaging.Core\\ERP.Messaging.Core.csproj"
             }
           }
         }

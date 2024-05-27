@@ -8,7 +8,10 @@ namespace ERP.StudentRequests.Api.MappingProfiles
     {
         public DomainToResponse()
         {
-            CreateMap<Request, GetReqLetterResponse>();
+            CreateMap<Request, GetReqLetterResponse>()
+                 .ForMember(
+                dest => dest.RequestId,
+                opt => opt.MapFrom(src => src.Id));
 
             CreateMap<Student, GetStudentResponse>()
                 .ForMember(

@@ -25,11 +25,12 @@
         </MudNavGroup>
 
         <MudNavGroup Title="Students" Icon="@Icons.Material.Filled.PeopleOutline" Expanded="false">
-            <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.People" IconColor="Color.Inherit">Registration</MudNavLink>
-            <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.People" IconColor="Color.Inherit">Mentering</MudNavLink>
-            <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.Security" IconColor="Color.Inherit">Requests</MudNavLink>
-            <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.Security" IconColor="Color.Inherit">Resutls</MudNavLink>
-            <MudNavLink Href="/counter" Icon="@Icons.Material.Filled.Security" IconColor="Color.Inherit">Feedbacks</MudNavLink>
+            <MudNavLink Href="/sitehome" Icon="@Icons.Material.Filled.Home" IconColor="Color.Inherit">Site Home</MudNavLink>
+            <MudNavLink Href="/enrolled" Icon="@Icons.Material.Filled.Class" IconColor="Color.Inherit">Enrolled Modules</MudNavLink>
+            <MudNavLink Href="/requests" Icon="@Icons.Material.Filled.Send" IconColor="Color.Inherit">Requests</MudNavLink>
+            <MudNavLink Href="/announcements" Icon="@Icons.Material.Filled.Announcement" IconColor="Color.Inherit">Announcements</MudNavLink>
+            <MudNavLink Href="/resultsfirst" Icon="@Icons.Material.Filled.Assignment" IconColor="Color.Inherit">Results</MudNavLink>
+            <MudNavLink Href="/feedback" Icon="@Icons.Material.Filled.Reviews" IconColor="Color.Inherit">Feedbacks</MudNavLink>
         </MudNavGroup>
 
         <MudNavGroup Title="Department" Icon="@Icons.Material.Filled.PeopleOutline" Expanded="false">
@@ -57,20 +58,20 @@
     @code {
     private string? currentUrl;
 
-    protected override void OnInitialized()
-    {
-        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
-        NavigationManager.LocationChanged += OnLocationChanged;
-    }
+    // protected override void OnInitialized()
+    // {
+    //     currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+    //     NavigationManager.LocationChanged += OnLocationChanged;
+    // }
 
-    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
-    {
-        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
-        StateHasChanged();
-    }
+    // private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    // {
+    //     currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+    //     StateHasChanged();
+    // }
 
-    public void Dispose()
-    {
-        NavigationManager.LocationChanged -= OnLocationChanged;
-    }
+    // public void Dispose()
+    // {
+    //     NavigationManager.LocationChanged -= OnLocationChanged;
+    // }
 }

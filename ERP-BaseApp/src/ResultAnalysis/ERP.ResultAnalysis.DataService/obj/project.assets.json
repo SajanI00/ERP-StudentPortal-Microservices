@@ -2233,11 +2233,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
       "projectName": "ERP.ResultAnalysis.DataService",
-      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\ERP.ResultAnalysis.DataService.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ResultAnalysis\\ERP.ResultAnalysis.DataService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
