@@ -1,0 +1,52 @@
+﻿@* @page "/requestdetails/{RequestId:guid}" *@
+@page "/requestdetails"
+@using ERP_StudentRequests.Core.DTOs.Response;
+@inject NavigationManager NavigationManager
+
+<h3>Request Details</h3>
+
+<MudContainer>
+    @if (requestDetails != null)
+    {
+        <MudCard>
+            <MudCardContent>
+                <h4>@requestDetails.Topic</h4>
+                <p><strong>Lecturer:</strong> @requestDetails.LecturerName</p>
+                <p><strong>Request Type:</strong> @requestDetails.RequestType</p>
+                <p><strong>Message:</strong> @requestDetails.Message</p>
+                <p><strong>Added Date:</strong> @requestDetails.AddedDate</p>
+            </MudCardContent>
+        </MudCard>
+    }
+    else
+    {
+        <p>Loading...</p>
+    }
+</MudContainer>
+
+@code {
+
+    public Guid requestId =  Guid.Parse("2f3de071-148e-4acd-b4b2-5795e34e9573");
+
+    private GetReqLetterResponse requestDetails;
+
+    private HttpClient Http = new HttpClient();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadRequestDetails();
+    }
+
+    private async Task LoadRequestDetails()
+    {
+        try
+        {
+            requestDetails = await Http.GetFromJsonAsync<GetReqLetterResponse>($"https://localhost:7011/api/Requests/{requestId}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+

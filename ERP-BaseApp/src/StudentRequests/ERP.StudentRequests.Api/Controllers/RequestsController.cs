@@ -24,6 +24,21 @@ namespace ERP.StudentRequests.Api.Controllers
             _requestService = requestService;
         }
 
+        [HttpGet]
+        [Route("{requestId:guid}")]
+        public async Task<IActionResult> GetReqDetailsMethod(Guid requestId)
+        {
+            var request = await _unitOfWork.Requests.GetById(requestId);
+
+            if (request == null)
+            {
+                return NotFound();
+            }
+
+            var result = _mapper.Map<GetReqLetterResponse>(request);
+
+            return Ok(result);
+        }
 
         [HttpGet]
         [Route("Students/{studentId:guid}")]
@@ -70,11 +85,48 @@ namespace ERP.StudentRequests.Api.Controllers
 
         }
 
+        //[HttpPost("")]
+        //public async Task<IActionResult> AddStudentRequest([FromBody] CreateReqLetterRequest request)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest();
+
+        //    var result = _mapper.Map<Request>(request);
+
+        //    await _unitOfWork.Requests.Add(result);
+        //    await _unitOfWork.CompleteAsync();
+
+        //    RequestCreatedNotificationRecord requestRecord = new RequestCreatedNotificationRecord
+        //       (RequestId: result.Id,
+        //        Topic: result.Topic,
+        //        AddedDate: result.AddedDate,
+        //        StudentName: result.StudentName,
+        //        LecturerName: result.LecturerName
+        //       );
+
+        //    await _requestService.SendNotification(requestRecord);
+
+        //    return CreatedAtAction(nameof(GetStudentRequests), new { studentId = result.StudentId }, result);
+
+        //}
+
         [HttpPost("")]
-        public async Task<IActionResult> AddStudentRequest([FromBody] CreateReqLetterRequest request)
+        public async Task<IActionResult> AddRequestForOneStudent([FromBody] CreateReqLetterRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
+
+            request.StudentId = Guid.Parse("292dcf28-b173-4619-a509-3ac83c576c38");
+            
+            var student = await _unitOfWork.Students.GetById(request.StudentId);
+            if (student == null)
+            {
+                return NotFound($"Student with ID {request.StudentId} not found.");
+            }
+
+            request.StudentName = student.Name;
+            request.StudentRegNo = student.RegNo;
+
 
             var result = _mapper.Map<Request>(request);
 

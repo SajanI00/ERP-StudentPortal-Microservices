@@ -2595,11 +2595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\ERP.ModuleRegistration.DataService.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\ERP.ModuleRegistration.DataService.csproj",
       "projectName": "ERP.ModuleRegistration.DataService",
-      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\ERP.ModuleRegistration.DataService.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\ERP.ModuleRegistration.DataService.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.DataService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2616,8 +2616,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.Core\\ERP.ModuleRegistration.Core.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 3\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.Core\\ERP.ModuleRegistration.Core.csproj"
+            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.Core\\ERP.ModuleRegistration.Core.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\ModuleRegistration\\ERP.ModuleRegistration.Core\\ERP.ModuleRegistration.Core.csproj"
             }
           }
         }

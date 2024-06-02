@@ -11,20 +11,21 @@
 
 <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6" @ref="tabs">
    
-    <MudTabPanel  Text="List Requests" @ref="panel01" >
+    <MudTabPanel  Text="Requests" @ref="panel01" >
 
         <RequestInbox />
 
     </MudTabPanel>
 
-    <MudTabPanel Text="Add Requests" @ref="panel02" >
-        <StudentAdd onAdded="Activate_01"/>
+@*     <MudTabPanel Text="Add Requests" @ref="panel02" >
+        <CreateRequest onAdded="Activate_01"/>
      
-    </MudTabPanel>
+    </MudTabPanel> *@
 
-    <MudTabPanel Text="Edit Requests" @ref="panel03">
-        <TabContent>This is tab content</TabContent>
-        <ChildContent>THis is child contnt</ChildContent>
+    <MudTabPanel Text="Create a Request" @ref="panel03">
+
+         <CreateRequest />
+
     </MudTabPanel>
     
         
@@ -41,18 +42,19 @@
     bool _editItem = false;
 
     MudTabPanel tab1;
-    void EditToggle()
-    {
+
+    // void EditToggle()
+    // {
        
 
-    }
+    // }
 
-    void Activate_01()
-    {
-        tabs.ActivatePanel(panel01);
-        Snackbar.Add("Request Added", Severity.Success);
+    // void Activate_01()
+    // {
+    //     tabs.ActivatePanel(panel01);
+    //     Snackbar.Add("Request Added", Severity.Success);
        
-    }
+    // }
 
     
 }

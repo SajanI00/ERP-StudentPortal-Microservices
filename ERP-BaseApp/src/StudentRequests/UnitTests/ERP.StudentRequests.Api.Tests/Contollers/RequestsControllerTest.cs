@@ -111,44 +111,44 @@ namespace ERP.StudentRequests.Api.Tests.Contollers
             notFoundResult.Value.Should().Be("Requests not found");
         }
 
-        [Fact]
-        public async Task AddStudentRequest_ReturnsCreatedAtAction_WhenModelStateIsValid()
-        {
-            // Arrange
-            var createRequest = _fixture.Create<CreateReqLetterRequest>();
-            var requestEntity = _fixture.Create<Request>();
-            var requestRecord = _fixture.Create<RequestCreatedNotificationRecord>();
+        //[Fact]
+        //public async Task AddStudentRequest_ReturnsCreatedAtAction_WhenModelStateIsValid()
+        //{
+        //    // Arrange
+        //    var createRequest = _fixture.Create<CreateReqLetterRequest>();
+        //    var requestEntity = _fixture.Create<Request>();
+        //    var requestRecord = _fixture.Create<RequestCreatedNotificationRecord>();
 
-            _mockMapper.Setup(mapper => mapper.Map<Request>(createRequest))
-                       .Returns(requestEntity);
+        //    _mockMapper.Setup(mapper => mapper.Map<Request>(createRequest))
+        //               .Returns(requestEntity);
 
-            // Act
-            var result = await _controller.AddStudentRequest(createRequest);
+        //    // Act
+        //    var result = await _controller.AddStudentRequest(createRequest);
 
-            // Assert
-            result.Should().BeOfType<CreatedAtActionResult>();
-            var createdAtActionResult = result as CreatedAtActionResult;
-            createdAtActionResult.ActionName.Should().Be(nameof(RequestsController.GetStudentRequests));
-            createdAtActionResult.RouteValues["studentId"].Should().Be(requestEntity.StudentId);
-            createdAtActionResult.Value.Should().Be(requestEntity);
+        //    // Assert
+        //    result.Should().BeOfType<CreatedAtActionResult>();
+        //    var createdAtActionResult = result as CreatedAtActionResult;
+        //    createdAtActionResult.ActionName.Should().Be(nameof(RequestsController.GetStudentRequests));
+        //    createdAtActionResult.RouteValues["studentId"].Should().Be(requestEntity.StudentId);
+        //    createdAtActionResult.Value.Should().Be(requestEntity);
 
-            _mockRequestService.Verify(x => x.SendNotification(requestRecord), Times.Once);
-        }
+        //    _mockRequestService.Verify(x => x.SendNotification(requestRecord), Times.Once);
+        //}
 
-        [Fact]
-        public async Task AddStudentRequest_ReturnsBadRequest_WhenModelStateIsInvalid()
-        {
-            // Arrange
-            var createRequest = _fixture.Build<CreateReqLetterRequest>().Without(x => x.Topic).Create(); // for a invalid request
+        //[Fact]
+        //public async Task AddStudentRequest_ReturnsBadRequest_WhenModelStateIsInvalid()
+        //{
+        //    // Arrange
+        //    var createRequest = _fixture.Build<CreateReqLetterRequest>().Without(x => x.Topic).Create(); // for a invalid request
 
-            _controller.ModelState.AddModelError("Topic", "Topic is required");
+        //    _controller.ModelState.AddModelError("Topic", "Topic is required");
 
-            // Act
-            var result = await _controller.AddStudentRequest(createRequest);
+        //    // Act
+        //    var result = await _controller.AddStudentRequest(createRequest);
 
-            // Assert
-            result.Should().BeOfType<BadRequestResult>();
-        }
+        //    // Assert
+        //    result.Should().BeOfType<BadRequestResult>();
+        //}
 
         [Fact]
         public async Task UpdateStudentRequestMethod_ReturnsNoContent_WhenModelStateIsValid()

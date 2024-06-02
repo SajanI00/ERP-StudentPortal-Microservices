@@ -22,6 +22,8 @@ namespace ERP.StudentRequests.Core.Entity
 
         public string StudentDegree { get; set; } = string.Empty;
 
+        public string Semester { get; set; } = string.Empty;
+
 
         public Guid StudentId { get; set; }
         [ForeignKey("StudentId")]

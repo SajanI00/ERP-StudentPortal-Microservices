@@ -1,0 +1,192 @@
+﻿@using ERP_StudentRequests.Core.DTOs.Request
+@using ERP_StudentRequests.Core.DTOs.Response
+@using MudBlazor
+@using FluentValidation
+@inject ISnackbar Snackbar
+
+
+
+
+<MudCard>
+    <MudForm Model="@model" @ref="@form" Validation="@(requestValidator.ValidateValue)"
+             ValidationDelay="0">
+        <MudCardContent>
+
+
+            <MudTextField @bind-Value="model.LecturerId"
+                          For="@(() => model.LecturerId)"
+                          Immediate="true"
+                          Label="Id of the Lecturer" />
+
+
+            <div style="display: flex; gap: 16px;">
+                <MudTextField @bind-Value="model.Semester"
+                              For="@(() => model.Semester)"
+                              Immediate="true"
+                              Label="Semester"
+                              Style="flex: 1;" />
+                <MudTextField @bind-Value="model.StudentBatch"
+                              For="@(() => model.StudentBatch)"
+                              Immediate="true"
+                              Label="Batch"
+                              Style="flex: 1;" />
+            </div>
+
+            <div style="padding-top: 20px;width: 80%">
+                <MudSelect Margin="Margin.Dense" T="string" Label="Degree" Variant="Variant.Outlined" @bind-Value="model.StudentDegree">
+                    <MudSelectItem Value="@("Computer Engineering")" />
+                    <MudSelectItem Value="@("Electrical and Information Engineering")" />
+                    <MudSelectItem Value="@("Mechanical Engineering")" />
+                    <MudSelectItem Value="@("Marine Engineering & Naval Architechture")" />
+                    <MudSelectItem Value="@("Civil Engineering")" />
+                </MudSelect>
+            </div>
+
+
+            <div style="padding-top: 20px;width: 80%">
+                <MudSelect Margin="Margin.Dense" T="string" Label="Lecturer Name" Variant="Variant.Outlined" @bind-Value="model.LecturerName">
+                    @foreach (var lecturer in Lecturers)
+                    {
+                        <MudSelectItem Value="@lecturer.Name" />
+                    }
+                </MudSelect>
+
+            </div>
+
+            <div style="padding-top: 20px;width: 80%">
+                <MudSelect Margin="Margin.Dense" T="string" Label="RequestType" Variant="Variant.Outlined" @bind-Value="model.RequestType">
+                    <MudSelectItem Value="@("Academic")" />
+                    <MudSelectItem Value="@("Lab sessions")" />
+                    <MudSelectItem Value="@("Requesting an excuse")" />
+                    <MudSelectItem Value="@("Reschedule")" />
+                    <MudSelectItem Value="@("Other")" />
+                </MudSelect>
+            </div>
+
+            <MudTextField @bind-Value="model.Topic"
+                          For="@(() => model.Topic)"
+                          Immediate="true"
+                          Label="Topic" />
+
+            <MudTextField @bind-Value="model.Message"
+                          For="@(() => model.Message)"
+                          Immediate="true"
+                          Label="Message" />
+
+
+        </MudCardContent>
+    </MudForm>
+    <MudCardActions>
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   Class="ml-auto"
+                   OnClick="@(async () => await Submit())">Add</MudButton>
+    </MudCardActions>
+</MudCard>
+
+
+
+
+@code {
+
+    private HttpClient Http = new HttpClient();
+
+    //[Parameter]
+    //public EventCallback onAdded { get; set; }
+
+
+    private CreateReqLetterRequest model = new CreateReqLetterRequest();
+    private List<GetLecturerResponse> Lecturers { get; set; } = new List<GetLecturerResponse>();
+
+
+    RequestModelValidator requestValidator = new RequestModelValidator();
+    MudForm form;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Lecturers = await Http.GetFromJsonAsync<List<GetLecturerResponse>>("https://localhost:7011/api/Lecturers");
+
+        }
+        catch (Exception ex)
+        {
+            Lecturers = null;
+        }
+
+    }
+
+    public class RequestModelValidator : AbstractValidator<CreateReqLetterRequest>
+    {
+        public RequestModelValidator()
+        {
+            RuleFor(x => x.StudentRegNo)
+                .NotEmpty()
+                .Length(1, 20);
+
+            RuleFor(x => x.Message)
+                .NotEmpty()
+                .Length(1, 500);
+
+
+
+        }
+
+        // private async Task<bool> IsUniqueAsync(string email)
+        // {
+        //     // Simulates a long running http call
+        //     await Task.Delay(2000);
+        //     return email.ToLower() != "test@test.com";
+        // }
+
+
+        public Func<object, string, Task<IEnumerable<string>>> ValidateValue => async (model, propertyName) =>
+        {
+            var result = await ValidateAsync(ValidationContext<CreateReqLetterRequest>
+                                .CreateWithOptions((CreateReqLetterRequest)model, x => x.IncludeProperties(propertyName)));
+            if (result.IsValid)
+                return Array.Empty<string>();
+            return result.Errors.Select(e => e.ErrorMessage);
+        };
+
+    }
+
+
+
+    private async Task Submit()
+    {
+        await form.Validate();
+
+        if (form.IsValid)
+        {
+            try
+            {
+
+                var response = await Http.PostAsJsonAsync("https://localhost:7011/api/Requests", model);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadFromJsonAsync<CreateReqLetterRequest>();
+                    // Trigger the onAdded callback if defined
+                    // if (onAdded.HasDelegate)
+                    // {
+                    //     await onAdded.InvokeAsync();
+                    // }
+                    Snackbar.Add("Request added successfully", MudBlazor.Severity.Success);
+                }
+                else
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Error: {errorContent}");
+                    Snackbar.Add($"Failed to add request: {response.ReasonPhrase}", MudBlazor.Severity.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                Snackbar.Add("An error occurred while adding the request", MudBlazor.Severity.Error);
+            }
+        }      
+    }
+}               
+

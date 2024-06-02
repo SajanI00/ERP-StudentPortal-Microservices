@@ -69,31 +69,30 @@
         </div>
     </div> *@
 
-   <div class="request-container">
-    <div class="request-messages">
+
+    <!-- List -->
+    <div class="request-container">
+        <div class="request-messages">
             @foreach (var request in FilteredMessages.OrderByDescending(m => m.AddedDate))
-        {
-            <div class="message received">
-                <MudCard Class="bg-light">
-                    <MudCardContent>
-                        <!-- Display RequestType above MudCard -->
-                        <div class="request-type">
-                            <span>@request.RequestType</span>
-                        </div>
-                        <div class="message-info">
-                            <span>Topic: @request.Topic</span>
-                        </div>
-                        <div>@request.Message</div>
-                        <div class="message-info" style="margin-top: 10px;">
-                            <!-- Added margin-top here -->
-                            <span>@request.LecturerName</span>
-                           @*  <span>@_request.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</span> *@
-                        </div>
-                    </MudCardContent>
-                </MudCard>
-            </div>
-        }
-    </div>
+            {
+                <div class="message received" @onclick="() => NavigateToRequestDetails()">
+                    <MudCard Class="bg-light">
+                        <MudCardContent>
+                            <div class="request-type">
+                                <span>@request.RequestType</span>
+                            </div>
+                            <div class="message-info">
+                                <span>Topic: @request.Topic</span>
+                            </div>
+                            <div>@request.Message</div>
+                            <div class="message-info" style="margin-top: 10px;">
+                                <span>@request.LecturerName</span>
+                            </div>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            }
+        </div>
 </div>
 
 
@@ -191,10 +190,10 @@
     }
 
 
-    void Edit(int studentId)
+    void NavigateToRequestDetails()
     {
-        NavigationManager.NavigateTo($"/editstudent/{studentId}");
-
+        // NavigationManager.NavigateTo($"/requestdetails/{requestId}");
+        NavigationManager.NavigateTo("/requestdetails");
     }
 }
 

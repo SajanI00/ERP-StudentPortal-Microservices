@@ -104,6 +104,7 @@ namespace ERP.StudentRequests.DataService.Repositories
                 result.StudentRegNo = request.StudentRegNo;
                 result.StudentBatch = request.StudentBatch;
                 result.StudentDegree = request.StudentDegree;
+                result.Semester = request.Semester;
 
                 return true;
 

@@ -25,5 +25,8 @@ namespace ERP_StudentRequests.Core.DTOs.Request
         public string StudentBatch { get; set; } = string.Empty;
 
         public string StudentDegree { get; set; } = string.Empty;
+
+        public string Semester { get; set; } = string.Empty;
+
     }
 }
