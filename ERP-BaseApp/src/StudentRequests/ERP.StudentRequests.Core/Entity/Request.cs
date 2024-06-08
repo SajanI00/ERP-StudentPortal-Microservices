@@ -6,6 +6,11 @@ namespace ERP.StudentRequests.Core.Entity
 {
     public class Request : BaseEntity
     {
+        public Request()
+        {
+            Replies = new HashSet<Reply>();
+        }
+
         public string Topic { get; set; } = string.Empty;
 
         public string RequestType { get; set; } = string.Empty;
@@ -33,5 +38,7 @@ namespace ERP.StudentRequests.Core.Entity
         public Guid LecturerId { get; set; }
         [ForeignKey("LecturerId")]
         public virtual Lecturer Lecturer { get; set; } = null!;
+
+        public virtual ICollection<Reply> Replies { get; set; }
     }
 }

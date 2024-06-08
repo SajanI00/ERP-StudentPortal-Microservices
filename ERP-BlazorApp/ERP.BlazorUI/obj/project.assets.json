@@ -241,7 +241,7 @@
           }
         }
       },
-      "MudBlazor/6.19.1": {
+      "MudBlazor/6.20.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components": "8.0.3",
@@ -705,10 +705,10 @@
         "microsoft.jsinterop.nuspec"
       ]
     },
-    "MudBlazor/6.19.1": {
-      "sha512": "1f3izX4C68n1LhxTJkJw6ulH1pGirCkbJVLXbtxNKZ6csd4GWXRLoXmvcD43taESGN6V+BTF8yoNHn9RWtuP5w==",
+    "MudBlazor/6.20.0": {
+      "sha512": "2MqW/E1OLszSqDhW06rpRTN4OpIRJU0iVzeiZLPzymckrKJH1Hg09St+O3kaEnsbXRcjcdM9iE5cSKzCgxvySQ==",
       "type": "package",
-      "path": "mudblazor/6.19.1",
+      "path": "mudblazor/6.20.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -724,7 +724,7 @@
         "lib/net7.0/MudBlazor.xml",
         "lib/net8.0/MudBlazor.dll",
         "lib/net8.0/MudBlazor.xml",
-        "mudblazor.6.19.1.nupkg.sha512",
+        "mudblazor.6.20.0.nupkg.sha512",
         "mudblazor.nuspec",
         "staticwebassets/MudBlazor.min.css",
         "staticwebassets/MudBlazor.min.js"
@@ -783,11 +783,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
       "projectName": "ERP.BlazorUI",
-      "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -804,11 +804,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj"
             },
-            "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 2\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj"
             }
           }
         }

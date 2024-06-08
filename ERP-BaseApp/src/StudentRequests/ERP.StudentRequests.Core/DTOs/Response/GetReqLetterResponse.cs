@@ -4,13 +4,13 @@ namespace ERP.StudentRequests.Core.DTOs.Response
 {
     public class GetReqLetterResponse
     {
+        public Guid RequestId { get; set; }
+
         public Guid StudentId { get; set; }
 
         public Guid LecturerId { get; set; }
 
-        public Guid RequestId { get; set; }
-
-        public DateTime AddedDate { get; set; } = DateTime.UtcNow;
+        public DateTime AddedDate { get; set; }
 
         public string Topic { get; set; } = string.Empty;
 

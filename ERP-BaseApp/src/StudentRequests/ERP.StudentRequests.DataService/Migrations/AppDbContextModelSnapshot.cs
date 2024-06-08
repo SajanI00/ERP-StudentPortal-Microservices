@@ -49,6 +49,45 @@ namespace ERP.StudentRequests.DataService.Migrations
                     b.ToTable("Lecturers");
                 });
 
+            modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Reply", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("LecturerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("RequestId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LecturerId");
+
+                    b.HasIndex("RequestId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Replies");
+                });
+
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Request", b =>
                 {
                     b.Property<Guid>("Id")
@@ -143,6 +182,36 @@ namespace ERP.StudentRequests.DataService.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Reply", b =>
+                {
+                    b.HasOne("ERP.StudentRequests.Core.Entity.Lecturer", "Lecturer")
+                        .WithMany("Replies")
+                        .HasForeignKey("LecturerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("FK_Replies_Lecturer");
+
+                    b.HasOne("ERP.StudentRequests.Core.Entity.Request", "Request")
+                        .WithMany("Replies")
+                        .HasForeignKey("RequestId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("FK_Replies_Request");
+
+                    b.HasOne("ERP.StudentRequests.Core.Entity.Student", "Student")
+                        .WithMany("Replies")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("FK_Replies_Student");
+
+                    b.Navigation("Lecturer");
+
+                    b.Navigation("Request");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Request", b =>
                 {
                     b.HasOne("ERP.StudentRequests.Core.Entity.Lecturer", "Lecturer")
@@ -166,11 +235,20 @@ namespace ERP.StudentRequests.DataService.Migrations
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Lecturer", b =>
                 {
+                    b.Navigation("Replies");
+
                     b.Navigation("Requests");
+                });
+
+            modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Request", b =>
+                {
+                    b.Navigation("Replies");
                 });
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Student", b =>
                 {
+                    b.Navigation("Replies");
+
                     b.Navigation("Requests");
                 });
 #pragma warning restore 612, 618

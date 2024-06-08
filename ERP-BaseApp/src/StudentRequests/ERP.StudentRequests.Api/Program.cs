@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MassTransit;
 using ERP.StudentRequests.Api.Services.Publishers.Interfaces;
 using ERP.StudentRequests.Api.Services.Publishers;
+using System.Text.Json.Serialization;
 
 
 
@@ -19,7 +20,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    //.AddJsonOptions(options =>
+    //{
+    //    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    //})
+    ;
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

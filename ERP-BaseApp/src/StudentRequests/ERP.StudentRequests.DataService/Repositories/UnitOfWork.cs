@@ -15,6 +15,8 @@ namespace ERP.StudentRequests.DataService.Repositories
 
         public IRequestRepository Requests { get; }
 
+        public IReplyRepository Replies { get; }
+
 
         public UnitOfWork(AppDbContext context, ILoggerFactory loggerFactory)
         {
@@ -24,6 +26,7 @@ namespace ERP.StudentRequests.DataService.Repositories
             Students = new StudentRepository(_context, logger);
             Lecturers = new LecturerRepository(_context, logger);
             Requests = new RequestRepository(_context, logger);
+            Replies = new ReplyRepository(_context, logger);
 
         }
 

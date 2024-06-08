@@ -7,6 +7,7 @@ namespace ERP.StudentRequests.Core.Entity
         public Lecturer()
         {
             Requests = new HashSet<Request>();
+            Replies = new HashSet<Reply>();
         }
 
 
@@ -15,5 +16,6 @@ namespace ERP.StudentRequests.Core.Entity
         public string Title { get; set; } = string.Empty;
 
         public virtual ICollection<Request> Requests { get; set; }
+        public virtual ICollection<Reply> Replies { get; set; }
     }
 }

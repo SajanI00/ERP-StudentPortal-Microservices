@@ -14,7 +14,7 @@ namespace ERP_StudentRequests.Core.DTOs.Response
 
         public string RequestType { get; set; } = string.Empty;
 
-        public DateTime AddedDate { get; set; } = DateTime.UtcNow;
+        public DateTime AddedDate { get; set; } 
 
         public string LecturerName { get; set; } = string.Empty;
 

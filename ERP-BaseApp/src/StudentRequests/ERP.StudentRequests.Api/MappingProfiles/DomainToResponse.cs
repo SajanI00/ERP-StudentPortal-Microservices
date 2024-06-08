@@ -13,6 +13,13 @@ namespace ERP.StudentRequests.Api.MappingProfiles
                 dest => dest.RequestId,
                 opt => opt.MapFrom(src => src.Id));
 
+
+            CreateMap<Reply, GetReplyResponse>()
+                .ForMember(
+               dest => dest.ReplyId,
+               opt => opt.MapFrom(src => src.Id));
+
+
             CreateMap<Student, GetStudentResponse>()
                 .ForMember(
                 dest => dest.StudentId,

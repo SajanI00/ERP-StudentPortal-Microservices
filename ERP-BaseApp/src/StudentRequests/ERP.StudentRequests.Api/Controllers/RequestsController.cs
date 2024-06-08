@@ -110,6 +110,7 @@ namespace ERP.StudentRequests.Api.Controllers
 
         //}
 
+        // create request
         [HttpPost("")]
         public async Task<IActionResult> AddRequestForOneStudent([FromBody] CreateReqLetterRequest request)
         {
@@ -146,6 +147,7 @@ namespace ERP.StudentRequests.Api.Controllers
             return CreatedAtAction(nameof(GetStudentRequests), new { studentId = result.StudentId }, result);
 
         }
+
 
         [HttpPut("")]
         public async Task<IActionResult> UpdateStudentRequestMethod([FromBody] UpdateReqLetterRequest request)

@@ -18,9 +18,4 @@
     <PackageReference Include="MudBlazor" Version="6.17.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\Request\" />
-	  <Folder Include="DTOs\Response\" />
-  </ItemGroup>
-
 </Project>

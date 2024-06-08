@@ -10,6 +10,8 @@ namespace ERP.StudentRequests.Core.Interfaces
 
         IRequestRepository Requests { get; }
 
+        IReplyRepository Replies { get; }
+
         Task<bool> CompleteAsync();
 
     }
