@@ -13,6 +13,9 @@ namespace ERP.StudentRequests.Core.Entity
         [ForeignKey("StudentId")]
         public virtual Student Student { get; set; } = null!;
 
+        //public string StudentName { get; set; } = string.Empty;
+        //public string LecturerName { get; set; } = string.Empty;
+        public string SenderName { get; set; } = string.Empty;
 
         public Guid LecturerId { get; set; }
         [ForeignKey("LecturerId")]

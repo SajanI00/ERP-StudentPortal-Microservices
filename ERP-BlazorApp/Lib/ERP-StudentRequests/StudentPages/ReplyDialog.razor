@@ -1,0 +1,56 @@
+﻿@namespace ERP_StudentRequests.StudentPages.ReplyDialog
+@rendermode InteractiveServer
+@using ERP_StudentRequests.Core.DTOs.Request
+@using ERP_StudentRequests.Core.DTOs.Response
+@inject NavigationManager NavigationManager
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudDialog MaxWidth="MaxWidth.Medium" FullWidth="true">
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.Reply" Class="mr-3 mb-n1" />
+            Enter Reply
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudTextField @bind-Value="newReplyMessage" Label="Message" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="SubmitReply">Submit</MudButton>
+    </DialogActions>
+</MudDialog>
+
+
+
+@code {
+
+    private HttpClient Http = new HttpClient();
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public GetReplyResponse ReplyData { get; set; } = new();
+
+    private string newReplyMessage = string.Empty;
+
+    private CreateReplyRequest newReply = new CreateReplyRequest();
+
+    private void Cancel()
+    {
+        MudDialog.Cancel();
+    }
+
+    private async Task SubmitReply()
+    {
+        newReply.RequestId = ReplyData.RequestId;
+        newReply.Message = newReplyMessage;
+
+        var response = await Http.PostAsJsonAsync("https://localhost:7011/api/Reply/Student", newReply);
+
+        Snackbar.Add("Reply submitted successfully!", Severity.Success);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+}

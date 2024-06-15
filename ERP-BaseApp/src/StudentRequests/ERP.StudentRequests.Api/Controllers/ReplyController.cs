@@ -19,17 +19,58 @@ namespace ERP.StudentRequests.Api.Controllers
 
 
         //create reply
-        [HttpPost("")]
-        public async Task<IActionResult> CreateReply([FromBody] CreateReplyRequest replyRequest)
+        [HttpPost("Student")]
+        public async Task<IActionResult> CreateReplyByStudent([FromBody] CreateReplyRequest replyRequest)
         {
 
-            //var request = await _unitOfWork.Requests.GetById(replyRequest.RequestId);
-            //if (request == null)
-            //{
-            //    return NotFound("Request not found");
-            //}
+            var request = await _unitOfWork.Requests.GetById(replyRequest.RequestId);
+            if (request == null)
+            {
+                return NotFound("Request not found");
+            }
 
-            //replyRequest.StudentId = request.StudentId;
+            replyRequest.StudentId = request.StudentId;
+            replyRequest.LecturerId = request.LecturerId;
+
+
+            var student = await _unitOfWork.Students.GetById(replyRequest.StudentId);
+            if (student == null)
+            {
+                return NotFound($"Student with ID {replyRequest.StudentId} not found.");
+            }
+
+            replyRequest.SenderName = student.Name;
+
+            var reply = _mapper.Map<Reply>(replyRequest);
+
+            await _unitOfWork.Replies.Add(reply);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(reply);
+
+        }
+
+        [HttpPost("Lecturer")]
+        public async Task<IActionResult> CreateReplyByLecturer([FromBody] CreateReplyRequest replyRequest)
+        {
+
+            var request = await _unitOfWork.Requests.GetById(replyRequest.RequestId);
+            if (request == null)
+            {
+                return NotFound("Request not found");
+            }
+
+            replyRequest.StudentId = request.StudentId;
+            replyRequest.LecturerId = request.LecturerId;
+
+
+            var lecturer = await _unitOfWork.Lecturers.GetById(replyRequest.LecturerId);
+            if (lecturer == null)
+            {
+                return NotFound($"Lecturer with ID {replyRequest.LecturerId} not found.");
+            }
+
+            replyRequest.SenderName = lecturer.Name;
 
             var reply = _mapper.Map<Reply>(replyRequest);
 

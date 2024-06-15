@@ -119,8 +119,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.Core.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Core.Tests\ERP.StudentRequests.Core.Tests.csproj", "{5D3A3E81-E069-4AA3-BD36-28A445C97C03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.DataService.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.DataService.Tests\ERP.StudentRequests.DataService.Tests.csproj", "{9C1D8A38-9717-4884-9F9E-25A5481575FB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP.StudentRequests.Api.Tests", "src\StudentRequests\UnitTests\ERP.StudentRequests.Api.Tests\ERP.StudentRequests.Api.Tests.csproj", "{6A7BFC5C-C5DC-4083-8038-3863719239BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ProjectInfrastructure", "_ProjectInfrastructure", "{96C93B25-18DE-45E1-AF56-F8E4E7ECD6C7}"
@@ -294,10 +292,6 @@ Global
 		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3A3E81-E069-4AA3-BD36-28A445C97C03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C1D8A38-9717-4884-9F9E-25A5481575FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A7BFC5C-C5DC-4083-8038-3863719239BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -349,7 +343,6 @@ Global
 		{F4CF1411-F9AC-45A2-BB77-7394DF3596FD} = {80CF0964-B529-4450-AF2A-4B4ED25D30B7}
 		{FADA3AB0-B471-40D1-B3A8-21986BDBF882} = {80CF0964-B529-4450-AF2A-4B4ED25D30B7}
 		{5D3A3E81-E069-4AA3-BD36-28A445C97C03} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
-		{9C1D8A38-9717-4884-9F9E-25A5481575FB} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
 		{6A7BFC5C-C5DC-4083-8038-3863719239BC} = {FADA3AB0-B471-40D1-B3A8-21986BDBF882}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
