@@ -17,6 +17,8 @@ namespace ERP.StudentRequests.DataService.Repositories
 
         public IReplyRepository Replies { get; }
 
+        public IAttachmentRepository Attachments { get; }
+
 
         public UnitOfWork(AppDbContext context, ILoggerFactory loggerFactory)
         {
@@ -27,6 +29,7 @@ namespace ERP.StudentRequests.DataService.Repositories
             Lecturers = new LecturerRepository(_context, logger);
             Requests = new RequestRepository(_context, logger);
             Replies = new ReplyRepository(_context, logger);
+            Attachments = new AttachmentRepository(_context, logger);
 
         }
 

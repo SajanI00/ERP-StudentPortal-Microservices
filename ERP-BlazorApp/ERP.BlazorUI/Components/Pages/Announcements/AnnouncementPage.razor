@@ -1,0 +1,266 @@
+﻿@page "/announcements"
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+@using ERP_Announcements.DTOs.Response
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<MudContainer>
+    <div class="title-content" style="margin: 40px;margin-left:300px; text-align:center ">
+        <h1 style="color:black; font-weight:500;font-size:35px">Announcements</h1>
+        <p style="color:slategrey; font-weight:300; font-size: 18px;">
+            Stay Updated with Latest Announcements Here
+        </p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+
+        <div style="padding-right:20px; width: 50%">
+            <MudTextField @bind-Value="searchTerm" Label="Search by keywords" Variant="Variant.Outlined"></MudTextField>
+        </div>
+
+        <div style="padding-right: 20px;width: 40%">
+            <MudSelect Margin="Margin.Dense" T="string" Label="Filter by" Variant="Variant.Outlined" @bind-Value="searchCriteria">
+                <MudSelectItem Value="@("All")" />
+                <MudSelectItem Value="@("Keywords")" />
+                <MudSelectItem Value="@("Sender")" />
+                <MudSelectItem Value="@("AnnouncementGroup")" />
+                <MudSelectItem Value="@("AnnouncementType")" />
+            </MudSelect>
+        </div>
+        <MudButton @onclick="SearchMessages" Variant="Variant.Filled" Color="Color.Primary" Style="border-radius: 10px; padding: 10px 20px; background-color: {{Colors.DeepPurple.Accent3}}; color: white;">Search</MudButton>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-messages">
+            @foreach (var message in FilteredMessages.OrderByDescending(m => m.AddedDate))
+            {
+                <div class="message received">
+
+                    <MudCard Class="@($"bg-{GetStripeColor(message.AnnouncementType.ToLower())}-light")">
+                        <MudCardContent>
+                            <!-- Display AnnouncementType above MudCard -->
+                            <div class="announcement-type">
+                                <span>@message.AnnouncementType</span>
+                            </div>
+                            <div class="message-info">
+                                <span>To: @message.AnnouncementGroupName</span>
+                            </div>
+                            <div>@message.Text</div>
+                            <div class="message-info" style="margin-top: 10px;">
+                                <!-- Added margin-top here -->
+                                <span>@message.SenderName</span>
+                                <span>@message.AddedDate.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            }
+        </div>
+    </div>
+</MudContainer>
+
+@code {
+
+    private HttpClient Http = new HttpClient();
+
+    private string GetStripeColor(string announcementType)
+    {
+        string color = "grey";
+
+        switch (announcementType.ToLower())
+        {
+            case "general":
+                color = "blue";
+                break;
+            case "labs":
+                color = "green";
+                break;
+            case "hostel":
+                color = "pink";
+                break;
+            case "exams":
+                color = "lavender";
+                break;
+            case "cancelling":
+                color = "lavender";
+                break;
+            case "other":
+                color = "green";
+                break;
+        }
+
+        return color;
+    }
+
+
+    private string searchTerm = "";
+    private string searchCriteria = "All";
+
+    List<GetAnnouncementResponse> Announcements = new List<GetAnnouncementResponse> ();
+    List<GetAnnouncementResponse> FilteredMessages = new List<GetAnnouncementResponse>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        try
+        {
+            Announcements = await Http.GetFromJsonAsync<List<GetAnnouncementResponse>>("https://localhost:7088/api/Announcement/Students/Announcement");
+            FilteredMessages = Announcements;
+
+        }
+        catch (Exception ex)
+        {
+            Announcements = null;
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    // Method to filter messages based on search criteria
+    private void SearchMessages()
+    {
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredMessages = Announcements;
+            return;
+        }
+        switch (searchCriteria)
+        {
+            case "Keywords":
+                FilteredMessages = Announcements.Where(m => m.Text.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+                break;
+            case "Sender":
+                FilteredMessages = Announcements.Where(m => m.SenderName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+                break;
+            case "AnnouncementGroup":
+                FilteredMessages = Announcements.Where(m => m.AnnouncementGroupName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+                break;
+            case "AnnouncementType": 
+                FilteredMessages = Announcements.Where(m => m.AnnouncementType.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+                break;
+            default:
+                FilteredMessages = Announcements;
+                break;
+        }
+    }
+}
+
+<style>
+
+    .title-content {
+        max-width: 60%;
+        padding: 0 20px;
+    }
+
+    .bg-blue-light {
+        background-color: transparent;
+        background-image: linear-gradient(to right, transparent 30%, lightblue);
+    }
+
+    .bg-green-light {
+        background-color: transparent;
+        background-image: linear-gradient(to right, transparent 30%, palegreen);
+    }
+
+    .bg-pink-light {
+        background-color: transparent;
+        background-image: linear-gradient(to right, transparent 5%, lavenderblush);
+    }
+
+    .bg-lavender-light {
+        background-color: transparent;
+        background-image: linear-gradient(to right, transparent 40%, lavender);
+    }
+
+    .bg-grey-light {
+        background-color: transparent;
+        background-image: linear-gradient(to right, transparent 40%, lightgrey);
+    }
+
+@*     D:\6th Sem\Software Project\Main project\ERP-StudentPortal-Microservices\ERP-BlazorApp\ERP.BlazorUI\wwwroot\images\4.jpg *@
+
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh; /* Ensure body covers the entire viewport height */
+        background-image: url('images/4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Light grey color with 50% opacity */
+            z-index: -1;
+        }
+
+    .heading {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+        .search-container input[type="text"] {
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            margin-left: 10px;
+        }
+
+    .chat-container {
+        width: 100%;
+    }
+
+    .chat-messages {
+        overflow-y: auto;
+        padding: 10px;
+        align-items: center;
+        overflow-y: auto;
+        padding: 10px;
+    }
+
+    .message {
+        margin-bottom: 10px;
+    }
+
+    .message-content {
+        padding: 8px 12px;
+        border-radius: 8px;
+        max-width: 80%;
+        word-wrap: break-word;
+    }
+
+    .message-info {
+        display: flex;
+        justify-content: space-between;
+        color: #666;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    /* Styles for AnnouncementType */
+    .announcement-type {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+</style>

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 
+
 namespace ERP.StudentRequests.Core.Entity
 {
     public class Request : BaseEntity
@@ -9,24 +10,17 @@ namespace ERP.StudentRequests.Core.Entity
         public Request()
         {
             Replies = new HashSet<Reply>();
+            Attachments = new HashSet<Attachment>();
         }
 
         public string Topic { get; set; } = string.Empty;
-
         public string RequestType { get; set; } = string.Empty;
-
         public string LecturerName { get; set; } = string.Empty;
-
         public string Message { get; set; } = string.Empty;
-
         public string StudentName { get; set; } = string.Empty;
-
         public string StudentRegNo { get; set; } = string.Empty;
-
         public string StudentBatch { get; set; } = string.Empty;
-
         public string StudentDegree { get; set; } = string.Empty;
-
         public string Semester { get; set; } = string.Empty;
 
 
@@ -40,5 +34,6 @@ namespace ERP.StudentRequests.Core.Entity
         public virtual Lecturer Lecturer { get; set; } = null!;
 
         public virtual ICollection<Reply> Replies { get; set; }
+        public virtual ICollection<Attachment> Attachments { get; set; }
     }
 }

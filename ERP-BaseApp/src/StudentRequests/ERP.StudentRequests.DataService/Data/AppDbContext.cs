@@ -10,6 +10,7 @@ namespace ERP.StudentRequests.DataService.Data
         public virtual DbSet<Lecturer> Lecturers { get; set; }
         public virtual DbSet<Request> Requests { get; set; }
         public virtual DbSet<Reply> Replies { get; set; }
+        public virtual DbSet<Attachment> Attachments { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -68,6 +69,15 @@ namespace ERP.StudentRequests.DataService.Data
                 .HasForeignKey(l => l.RequestId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .HasConstraintName("FK_Replies_Request");
+            });
+
+            modelBuilder.Entity<Attachment>(entity =>
+            {
+                entity.HasOne(r => r.Request)
+                      .WithMany(a => a.Attachments)
+                      .HasForeignKey(r => r.RequestId)
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .HasConstraintName("FK_Attachments_Request");
             });
 
         }

@@ -19,6 +19,8 @@ namespace ERP.StudentRequests.Api.MappingProfiles
                dest => dest.ReplyId,
                opt => opt.MapFrom(src => src.Id));
 
+            CreateMap<Attachment, AttachmentResponse>();
+
 
             CreateMap<Student, GetStudentResponse>()
                 .ForMember(

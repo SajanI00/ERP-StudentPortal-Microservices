@@ -17,9 +17,10 @@ namespace ERP.StudentRequests.Api.MappingProfiles
                 opt => opt.MapFrom(src => DateTime.UtcNow))
                 .ForMember(
                 dest => dest.UpdatedDate,
-                opt => opt.MapFrom(src => DateTime.UtcNow))
+                opt => opt.MapFrom(src => DateTime.UtcNow));
 
-            ;
+
+
 
             CreateMap<UpdateReqLetterRequest, Request>()
                 .ForMember(
@@ -28,17 +29,17 @@ namespace ERP.StudentRequests.Api.MappingProfiles
             ;
 
             CreateMap<CreateReplyRequest, Reply>()
-   .ForMember(
-   dest => dest.Status,
-   opt => opt.MapFrom(src => 1))
-   .ForMember(
-   dest => dest.AddedDate,
-   opt => opt.MapFrom(src => DateTime.UtcNow))
-   .ForMember(
-   dest => dest.UpdatedDate,
-   opt => opt.MapFrom(src => DateTime.UtcNow))
+                .ForMember(
+                dest => dest.Status,
+                opt => opt.MapFrom(src => 1))
+                .ForMember(
+                dest => dest.AddedDate,
+                opt => opt.MapFrom(src => DateTime.UtcNow))
+                .ForMember(
+                dest => dest.UpdatedDate,
+                opt => opt.MapFrom(src => DateTime.UtcNow))
 
-;
+            ;
 
             CreateMap<CreateStudentRequest, Student>()
                  .ForMember(

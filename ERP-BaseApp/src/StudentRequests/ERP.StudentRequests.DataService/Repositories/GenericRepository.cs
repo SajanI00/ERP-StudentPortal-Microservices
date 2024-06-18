@@ -19,7 +19,7 @@ namespace ERP.StudentRequests.DataService.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public virtual Task<IEnumerable<T>> GetAll()
+        public virtual Task<IEnumerable<T>> GetAll()         //Not Implemented
         {
             throw new NotImplementedException();
         }
@@ -35,12 +35,12 @@ namespace ERP.StudentRequests.DataService.Repositories
             return true;
         }
 
-        public virtual Task<bool> Delete(Guid id)
+        public virtual Task<bool> Delete(Guid id)          //Not Implemented
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<bool> Update(T entity)
+        public virtual Task<bool> Update(T entity)        //Not Implemented
         {
             throw new NotImplementedException();
         }

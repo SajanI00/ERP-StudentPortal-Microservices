@@ -13,10 +13,10 @@
         <MudCardContent>
 
 
-            <MudTextField @bind-Value="model.LecturerId"
+           @*  <MudTextField @bind-Value="model.LecturerId"
                           For="@(() => model.LecturerId)"
                           Immediate="true"
-                          Label="Id of the Lecturer" />
+                          Label="Id of the Lecturer" /> *@
 
 
             <div style="display: flex; gap: 16px;">
@@ -44,10 +44,10 @@
 
 
             <div style="padding-top: 20px;width: 80%">
-                <MudSelect Margin="Margin.Dense" T="string" Label="Lecturer Name" Variant="Variant.Outlined" @bind-Value="model.LecturerName">
+                <MudSelect Margin="Margin.Dense" T="GetLecturerResponse" Label="Lecturer" Variant="Variant.Outlined" @bind-Value="selectedLecturer">
                     @foreach (var lecturer in Lecturers)
                     {
-                        <MudSelectItem Value="@lecturer.Name" />
+                        <MudSelectItem Value="@lecturer">@lecturer.Name</MudSelectItem>
                     }
                 </MudSelect>
 
@@ -97,6 +97,7 @@
 
     private CreateReqLetterRequest model = new CreateReqLetterRequest();
     private List<GetLecturerResponse> Lecturers { get; set; } = new List<GetLecturerResponse>();
+    private GetLecturerResponse selectedLecturer;
 
 
     RequestModelValidator requestValidator = new RequestModelValidator();
@@ -161,6 +162,11 @@
         {
             try
             {
+                if (selectedLecturer != null)
+                {
+                    model.LecturerId = selectedLecturer.LecturerId;
+                    model.LecturerName = selectedLecturer.Name;
+                }
 
                 var response = await Http.PostAsJsonAsync("https://localhost:7011/api/Requests", model);
 

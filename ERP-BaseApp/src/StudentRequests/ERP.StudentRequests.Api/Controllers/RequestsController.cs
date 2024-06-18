@@ -6,6 +6,9 @@ using ERP.StudentRequests.Core.DTOs.Response;
 using ERP.StudentRequests.Core.Entity;
 using ERP.StudentRequests.Api.Services.Publishers.Interfaces;
 using ERP.StudentRequests.Core.Contracts;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace ERP.StudentRequests.Api.Controllers
 {
@@ -130,6 +133,7 @@ namespace ERP.StudentRequests.Api.Controllers
 
 
             var result = _mapper.Map<Request>(request);
+
 
             await _unitOfWork.Requests.Add(result);
             await _unitOfWork.CompleteAsync();

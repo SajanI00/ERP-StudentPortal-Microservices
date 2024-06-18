@@ -17,6 +17,43 @@ namespace ERP.StudentRequests.DataService.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
 
+            modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Attachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("RequestId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RequestId");
+
+                    b.ToTable("Attachments", (string)null);
+                });
+
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Lecturer", b =>
                 {
                     b.Property<Guid>("Id")
@@ -46,7 +83,7 @@ namespace ERP.StudentRequests.DataService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Lecturers");
+                    b.ToTable("Lecturers", (string)null);
                 });
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Reply", b =>
@@ -89,7 +126,7 @@ namespace ERP.StudentRequests.DataService.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Replies");
+                    b.ToTable("Replies", (string)null);
                 });
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Request", b =>
@@ -155,7 +192,7 @@ namespace ERP.StudentRequests.DataService.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Requests");
+                    b.ToTable("Requests", (string)null);
                 });
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Student", b =>
@@ -183,7 +220,19 @@ namespace ERP.StudentRequests.DataService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
+                });
+
+            modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Attachment", b =>
+                {
+                    b.HasOne("ERP.StudentRequests.Core.Entity.Request", "Request")
+                        .WithMany("Attachments")
+                        .HasForeignKey("RequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Attachments_Request");
+
+                    b.Navigation("Request");
                 });
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Reply", b =>
@@ -246,6 +295,8 @@ namespace ERP.StudentRequests.DataService.Migrations
 
             modelBuilder.Entity("ERP.StudentRequests.Core.Entity.Request", b =>
                 {
+                    b.Navigation("Attachments");
+
                     b.Navigation("Replies");
                 });
 

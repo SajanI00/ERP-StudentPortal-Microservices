@@ -9,63 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ERP.BlazorUI
 build_property.RootNamespace = ERP.BlazorUI
-build_property.ProjectDir = D:\6th Sem\Software Project\Main project\Github_W\ERP-StudentPortal-Microservices\ERP-BlazorApp\ERP.BlazorUI\
+build_property.ProjectDir = D:\6th Sem\Software Project\Main project\ERP-StudentPortal-Microservices\ERP-BlazorApp\ERP.BlazorUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\6th Sem\Software Project\Main project\Github_W\ERP-StudentPortal-Microservices\ERP-BlazorApp\ERP.BlazorUI
+build_property.MSBuildProjectDirectory = D:\6th Sem\Software Project\Main project\ERP-StudentPortal-Microservices\ERP-BlazorApp\ERP.BlazorUI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/App.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Home.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Layout/NavMenu.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/MyMudProviders.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/MyMudProviders.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNeU11ZFByb3ZpZGVycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/MyMudThemeProvider.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/MyMudThemeProvider.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNeU11ZFRoZW1lUHJvdmlkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Counter.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Announcements/AnnouncementPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbm5vdW5jZW1lbnRzXEFubm91bmNlbWVudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Error.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/LoginPage.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Requests/RequestDetailsPage.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Requests/RequestDetailsPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXF1ZXN0c1xSZXF1ZXN0RGV0YWlsc1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Weather.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Routes.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/_Imports.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/Github_W/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Layout/MainLayout.razor]
+[D:/6th Sem/Software Project/Main project/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-q5yx5srfcr

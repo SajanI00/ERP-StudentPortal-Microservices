@@ -12,6 +12,7 @@ namespace ERP.Announcements.Api.Controllers
     public class AnnouncementController : BaseController
     {
         public readonly IAnnouncementNotificationPublisherService _announcementService;
+        private static readonly Guid FixedStudentId = new Guid("348d1f7f-4687-4eae-bb4b-11b43286d3dc");
 
         public AnnouncementController(IUnitOfWork unitOfWork, IMapper mapper, IAnnouncementNotificationPublisherService announcementService) 
             : base(unitOfWork, mapper)
@@ -25,6 +26,24 @@ namespace ERP.Announcements.Api.Controllers
         {
 
             var announcements = await _unitOfWork.Announcements.GetStudentAnnouncementAsync(studentId);
+
+            if (announcements == null || !announcements.Any())
+                return NotFound("Announcements not found");
+
+            var result = _mapper.Map<IEnumerable<GetAnnouncementResponse>>(announcements);
+
+            return Ok(result);
+
+
+        }
+
+        // Get announcements for One student
+        [HttpGet]
+        [Route("Students/Announcement")]
+        public async Task<IActionResult> GetOneStudentAnnouncements()
+        {
+
+            var announcements = await _unitOfWork.Announcements.GetStudentAnnouncementAsync(FixedStudentId);
 
             if (announcements == null || !announcements.Any())
                 return NotFound("Announcements not found");
@@ -71,6 +90,22 @@ namespace ERP.Announcements.Api.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest();
+
+            var announcementGroup = await _unitOfWork.AnnouncementGroups.GetById(announcement.AnnouncementGroupId);
+            if (announcementGroup == null)
+            {
+                return NotFound($"AnnouncementGroup with ID {announcement.AnnouncementGroupId} not found.");
+            }
+
+            announcement.AnnouncementGroupName = announcementGroup.GroupName;
+
+            var sender = await _unitOfWork.Senders.GetById(announcement.SenderId);
+            if (sender == null)
+            {
+                return NotFound($"Sender with ID {announcement.SenderId} not found.");
+            }
+
+            announcement.SenderName = sender.Name;
 
             var result = _mapper.Map<Announcement>(announcement);
 

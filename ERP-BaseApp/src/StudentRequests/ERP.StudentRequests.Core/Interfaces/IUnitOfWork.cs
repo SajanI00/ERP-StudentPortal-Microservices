@@ -12,6 +12,8 @@ namespace ERP.StudentRequests.Core.Interfaces
 
         IReplyRepository Replies { get; }
 
+        IAttachmentRepository Attachments { get; }
+
         Task<bool> CompleteAsync();
 
     }
