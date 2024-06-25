@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\ModuleRegistration\ERP.ModuleRegistration.Core\ERP.ModuleRegistration.Core.csproj" />
-  </ItemGroup>
-
 </Project>

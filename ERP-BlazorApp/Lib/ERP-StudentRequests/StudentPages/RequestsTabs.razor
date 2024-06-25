@@ -2,7 +2,7 @@
 @using MudBlazor
 @rendermode InteractiveServer
 @inject ISnackbar Snackbar
-
+@using ERP_Feedbacks.Pages
 
 <MudPopoverProvider></MudPopoverProvider>
 <MudDialogProvider />
@@ -21,6 +21,11 @@
         <CreateRequest onAdded="Activate_01"/>
      
     </MudTabPanel> *@
+
+    <MudTabPanel Text="Feedbacks" @ref="panel02">
+        <FeedbacksPage />
+
+    </MudTabPanel>
 
     <MudTabPanel Text="Create a Request" @ref="panel03">
 

@@ -1,6 +1,6 @@
 ﻿
 
-using ERP.ModuleRegistration.Core.Entity;
+//using ERP.ModuleRegistration.Core.Entity;
 
 namespace ERP.StudentFeedback.Application.UseCases
 {

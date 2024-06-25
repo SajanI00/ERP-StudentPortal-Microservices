@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP-StudentRequests", "Lib\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP-Announcements", "Lib\ERP-Announcements\ERP-Announcements.csproj", "{770B78AE-4DE1-4A34-98BA-6C33FF166AC7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERP-Feedbacks", "Lib\ERP-Feedbacks\ERP-Feedbacks.csproj", "{D3DA8F44-5EF0-407D-8307-9DC0ACA0A95D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{770B78AE-4DE1-4A34-98BA-6C33FF166AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770B78AE-4DE1-4A34-98BA-6C33FF166AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770B78AE-4DE1-4A34-98BA-6C33FF166AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DA8F44-5EF0-407D-8307-9DC0ACA0A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DA8F44-5EF0-407D-8307-9DC0ACA0A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DA8F44-5EF0-407D-8307-9DC0ACA0A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DA8F44-5EF0-407D-8307-9DC0ACA0A95D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

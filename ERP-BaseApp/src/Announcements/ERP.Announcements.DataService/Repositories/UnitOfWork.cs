@@ -19,6 +19,7 @@ namespace ERP.Announcements.DataService.Repositories
         public IAnnouncementRepository Announcements { get; }
 
 
+
         public UnitOfWork(AppDbContext context, ILoggerFactory loggerFactory)
         {
             _context = context;

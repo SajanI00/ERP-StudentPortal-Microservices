@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ERP.Announcements.Core.DTOs.Request;
 using ERP.Announcements.Core.Entity;
-using ERP.Announcements.Core.Interfaces;
+
 
 namespace ERP.Announcements.Api.MappingProfiles
 {

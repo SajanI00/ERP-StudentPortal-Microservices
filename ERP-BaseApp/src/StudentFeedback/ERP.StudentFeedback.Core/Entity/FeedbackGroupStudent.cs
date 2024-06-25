@@ -1,13 +1,17 @@
 ﻿
 
-namespace ERP.StudentFeedback.Core.Entity
-{
-    public class FeedbackGroupStudent : BaseEntity
-    {
-        public Guid StudentId { get; set; }
-        public Student Student { get; set; }
+//using System.ComponentModel.DataAnnotations.Schema;
 
-        public Guid AnnouncementGroupId { get; set; }
-        public FeedbackGroup FeedbackGroup { get; set; }
-    }
-}
+//namespace ERP.StudentFeedback.Core.Entity
+//{
+//    public class FeedbackGroupStudent : BaseEntity
+//    {
+//        public Guid StudentId { get; set; }
+//        [ForeignKey("StudentId")]
+//        public Student? Student { get; set; }
+
+//        public Guid FeedbackGroupId { get; set; }
+//        [ForeignKey("FeedbackGroupId")]
+//        public FeedbackGroup? FeedbackGroup { get; set; }
+//    }
+//}

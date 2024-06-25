@@ -24,7 +24,7 @@ namespace ERP.Announcements.DataService.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "{Repo} GetStudentAnnouncementGroupsAsync function error", typeof(AnnouncementGroup));
+                _logger.LogError(ex, "{Repo} GetStudentAnnouncementGroupsAsync function error", typeof(AnnouncementGroupRepository));
                 throw;
             }
         }

@@ -1,15 +1,30 @@
+using ERP.StudentFeedback.DataService;
+using Microsoft.EntityFrameworkCore;
+using ERP.StudentFeedback.Core.Interfaces;
+using ERP.StudentFeedback.DataService.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(connectionString)
+);
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -18,7 +33,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 

@@ -1,38 +1,56 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ERP.StudentFeedback.Core.Entity
 {
     public class Feedback : BaseEntity
     {
 
-        public Feedback() { }
         public string ModuleName { get; set; } = string.Empty;
-        public string SelectedLecturer { get; set; } = string.Empty;
-        public string Semester { get; set; } = string.Empty;
+        public string LecturerName { get; set; } = string.Empty;
+        public string SemesterName { get; set; } = string.Empty;
         public string Department { get; set; } = string.Empty;
         public string OverallFeedback { get; set; } = string.Empty;
 
-        public int LectureContentRating { get; set; }
-        public int LectureEngagementRating { get; set; }
-        public int CommunicationRating { get; set; }
-        public int ExamplesRating { get; set; }
-        public int CoverageRating { get; set; }
-        public int PaceRating { get; set; }
-        public int ParticipationRating { get; set; }
-        public int VisualAidsRating { get; set; }
-        public int RealWorldApplicationsRating { get; set; }
-        public int ConceptRating { get; set; }
-        public int LectureOrganizationRating { get; set; }
-        public int InteractionRating { get; set; }
-        public int ExplanationClarityRating { get; set; }
-        public int SummaryEffectivenessRating { get; set; }
-        public int RelevanceToCourseRating { get; set; }
+        public int LectureContentRating { get; set; }        // 0
+        public int LectureEngagementRating { get; set; }     // 1
+        public int CommunicationRating { get; set; }         // 2
+        public int ExamplesRating { get; set; }              // 3
+        public int CoverageRating { get; set; }              // 4
+        public int PaceRating { get; set; }                  // 5
+        public int ParticipationRating { get; set; }         // 6
+        public int VisualAidsRating { get; set; }            // 7
+        public int RealWorldApplicationsRating { get; set; } // 8
+        public int ConceptRating { get; set; }               // 9
+        public int LectureOrganizationRating { get; set; }   // 10
+        public int InteractionRating { get; set; }           // 11
+        public int ExplanationClarityRating { get; set; }    // 12
+        public int SummaryEffectivenessRating { get; set; }  // 13
+        public int RelevanceToCourseRating { get; set; }     // 14
 
 
-        public List<int> Ratings = new List<int>(new int[15]);
 
-        public List<Lecturer> Lecturers { get; set; } = new List<Lecturer>();
-        public List<string> Semesters { get; set; } = new List<string>();
-        public List<string> Modules { get; set; } = new List<string>();
+        //public Guid FeedbackGroupId { get; set; }
+        //[ForeignKey("FeedbackGroupId")]
+        //public virtual FeedbackGroup? FeedbackGroup { get; set; }
+
+
+        //public Guid StudentId { get; set; }
+        //[ForeignKey("StudentId")]
+        //public virtual Student? Student { get; set; }
+
+        public Guid LecturerId { get; set; }
+        [ForeignKey("LecturerId")]
+        public virtual Lecturer? Lecturer { get; set; }
+
+
+        public Guid SemesterId { get; set; }
+        [ForeignKey("SemesterId")]
+        public virtual Semester? Semester { get; set; }
+
+        public Guid ModuleId { get; set; }
+        [ForeignKey("ModuleId")]
+        public virtual Module? Module { get; set; }
+
+
     }
 }

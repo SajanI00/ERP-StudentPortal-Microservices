@@ -1,0 +1,256 @@
+﻿@page "/feedback"
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+@using ERP_Feedbacks.DTOs.Response;
+@using ERP_Feedbacks.DTOs.Request;
+@using MudBlazor
+@inject ISnackbar Snackbar
+<MudSnackbarProvider />
+
+
+<h3 style="text-align: center; padding-top: 20px">Lecture Feedback</h3>
+
+<MudContainer Style="padding-right:40px;justify-content:center">
+
+    <div style="padding-top: 20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="GetLecturerResponse" Label="Lecturer" Variant="Variant.Outlined" @bind-Value="SelectedLecturer" OnValueChanged="async (string value) => await OnLecturerSelected(value)">
+            @foreach (var lecturer in Lecturers)
+            {
+                <MudSelectItem Value="@lecturer">@lecturer.Name</MudSelectItem>
+            }
+        </MudSelect>
+
+    </div>
+    <div style="padding-top: 20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="GetSemesterResponse" Label="Semester" Variant="Variant.Outlined" @bind-Value="SelectedSemester">
+            @foreach (var semester in Semesters)
+            {
+                <MudSelectItem Value="@semester.SemesterName" />
+            }
+        </MudSelect>
+    </div>
+    <div style="padding-top:20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="GetModuleResponse" Label="Module" Variant="Variant.Outlined" @bind-Value="SelectedModule">
+            @foreach (var module in Modules)
+            {
+                <MudSelectItem Value="@module.ModuleName" />
+            }
+        </MudSelect>
+    </div>
+
+    <div style="padding-top: 20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="string" Label="Department" Variant="Variant.Outlined" @bind-Value="Department">
+            <MudSelectItem Value="@("Department of Interdisciplinary Studies")" />
+            <MudSelectItem Value="@("Department of Electrical and Information Engineering")" />
+            <MudSelectItem Value="@("Department of Mechanical Engineering")" />
+            <MudSelectItem Value="@("Department of Marine Engineering & Naval Architechture")" />
+            <MudSelectItem Value="@("Department of Civil Engineering")" />
+        </MudSelect>
+    </div>
+    <br>
+</MudContainer>
+
+<MudContainer Style="padding:20px">
+    <MudPaper Class="p-6">
+
+        <div style="padding:20px">
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">1. How clear was the lecture content?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[0]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">2. How engaging was the lecture?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[1]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">3. Did the lecturer effectively communicate the key points?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[2]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">4. Were the examples provided helpful in understanding the concepts?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[3]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">5. Did the lecture adequately cover the relevant material?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[4]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">6. How well-paced was the lecture?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[5]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">7. Did the lecturer encourage participation and questions?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[6]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">8. Were visual aids (slides, diagrams, etc.) used effectively?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[7]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">9. Did the lecturer provide real-world applications/examples?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[8]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">10. Were the examples provided helpful in understanding the concepts?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[9]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">11. How organized was the lecture?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[10]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">12. Did the lecturer provide sufficient opportunities for interaction/discussion?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[11]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">13. Were the explanations thorough and easy to follow?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[12]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">14. Did the lecturer effectively summarize key points?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[13]" />
+            </div>
+            <br>
+            <div class="mb-4" style="width: 100%;">
+                <MudTypography Class="mb-2">15. How relevant was the lecture to the course objectives?</MudTypography>
+                <MudRating Max="5" @bind-SelectedValue="@ratings[14]" />
+            </div>
+            <div style="padding-top:20px;width: 80%">
+                <MudTextField @bind-Value="OverallFeedback" Label="Overall, how would you explain the quality of the lecture" Variant="Variant.Outlined"></MudTextField>
+            </div>
+        </div>
+        <div style="padding:20px">
+            <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="SubmitFeedback">Submit Response</MudButton>
+        </div>
+
+    </MudPaper>
+</MudContainer>
+
+@code {
+    private List<int> ratings = new List<int>(new int[15]);
+    private string ModuleName ;
+    private string Semester;
+    private string Department;
+    private string OverallFeedback;
+
+    private HttpClient Http = new HttpClient();
+    private CreateFeedbackRequest feedback = new CreateFeedbackRequest();
+
+
+    private GetLecturerResponse SelectedLecturer;
+    private GetModuleResponse SelectedModule;
+    private GetSemesterResponse SelectedSemester;
+
+    private List<GetLecturerResponse> Lecturers { get; set; } = new List<GetLecturerResponse>();
+    private List<GetSemesterResponse> Semesters { get; set; } = new List<GetSemesterResponse>();
+    private List<GetModuleResponse> Modules { get; set; } = new List<GetModuleResponse>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadLecturers();
+    }
+
+    private async Task LoadLecturers()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GetLecturerResponse>>("https://localhost:7029/api/Lecturers");
+            Lecturers = response ?? new List<GetLecturerResponse>();
+
+        }
+        catch (Exception ex)
+        {
+            Lecturers = new List<GetLecturerResponse>();
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async Task OnLecturerSelected(GetLecturerResponse lecturer)
+    {
+        if (lecturer != null)
+        {
+            SelectedLecturer = lecturer;
+        }
+
+        await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
+    }
+
+    
+    private async Task LoadModulesAndSemesters(Guid lecturerId)
+    {
+        var lecturer = Lecturers.FirstOrDefault(l => l.LecturerId == lecturerId);
+        if (lecturer != null)
+        {
+            try
+            {
+                var modules = await Http.GetFromJsonAsync<List<GetModuleResponse>>($"https://localhost:7029/api/LecturersModules/Lecturers/{lecturerId}");
+                Modules = modules ?? new List<GetModuleResponse>();
+
+                var semesters = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7029/api/LecturersSemesters/Lecturers/{lecturerId}");
+                Semesters = semesters ?? new List<GetSemesterResponse>();
+            }
+            catch (Exception ex)
+            {
+                Modules = new List<GetModuleResponse>();
+                Semesters = new List<GetSemesterResponse>();
+            }
+        }
+
+        StateHasChanged();
+    }
+
+
+
+    private async Task SubmitFeedback()
+    {
+        // Load modules and semesters based on selected lecturer
+        await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
+
+        var feedback = new CreateFeedbackRequest()
+            {
+                LecturerId = SelectedLecturer.LecturerId,
+                LecturerName = SelectedLecturer.Name,
+                ModuleId = SelectedModule.ModuleId,
+                ModuleName = SelectedModule.ModuleName,
+                SemesterId = SelectedSemester.SemesterId,
+                SemesterName = SelectedSemester.SemesterName,
+
+                Department = Department,
+                LectureContentRating = ratings[0],
+                LectureEngagementRating = ratings[1],
+                CommunicationRating = ratings[2],
+                ExamplesRating = ratings[3],
+                CoverageRating = ratings[4],
+                PaceRating = ratings[5],
+                ParticipationRating = ratings[6],
+                VisualAidsRating = ratings[7],
+                RealWorldApplicationsRating = ratings[8],
+                ConceptRating = ratings[9],
+                LectureOrganizationRating = ratings[10],
+                InteractionRating = ratings[11],
+                ExplanationClarityRating = ratings[12],
+                SummaryEffectivenessRating = ratings[13],
+                RelevanceToCourseRating = ratings[14],
+                OverallFeedback = OverallFeedback
+            };
+
+        var response = await Http.PostAsJsonAsync("https://localhost:7029/api/Feedback", feedback);
+
+        Snackbar.Add("Feedback submitted successfully!", Severity.Success);
+    }
+
+
+}
