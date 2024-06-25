@@ -1,0 +1,81 @@
+﻿@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
+@using ERP_SiteHome.DTOs.Response;
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Batches and Semesters</h5>
+                </div>
+                <div class="card-body">
+                    @if (Batches == null || Semesters == null)
+                    {
+                        <p>Loading batches and semesters...</p>
+                    }
+                    else
+                    {
+                        @foreach (var batch in Batches)
+                        {
+                            <div class="card mb-3">
+                                <div class="card-header bg-info text-white">
+                                    <h6 class="mb-0">@batch.BatchName</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        @foreach (var semester in Semesters)
+                                        {
+                                            var href = $"/departments/{departmentId}/{batch.BatchId}/{semester.SemesterId}";
+                                            <a href="@href" class="list-group-item list-group-item-action">@semester.SemesterName</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Guid departmentId { get; set; }
+
+    public Guid batchId { get; set; }
+
+    private HttpClient Http = new HttpClient();
+
+    private List<GetBatchResponse> Batches = new List<GetBatchResponse>();
+    private List<GetSemesterResponse> Semesters = new List<GetSemesterResponse>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Batches = await Http.GetFromJsonAsync<List<GetBatchResponse>>($"https://localhost:7186/api/Batch/Departments/{departmentId}");
+            await LoadSemester();
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+            Batches = new List<GetBatchResponse>(); // Ensure batches is not null
+        }
+    }
+
+    private async Task LoadSemester()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7186/api/Semester/Batches/{batchId}");
+            Semesters = response ?? new List<GetSemesterResponse>();
+        }
+        catch (Exception ex)
+        {
+            Semesters = new List<GetSemesterResponse>();
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

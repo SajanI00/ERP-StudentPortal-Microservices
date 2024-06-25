@@ -1,0 +1,217 @@
+﻿@page "/sitehome"
+@inject NavigationManager Navigation
+@using ERP_SiteHome.DTOs.Response;
+@rendermode InteractiveServer
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: #f0f7ff;
+        }
+    </style>
+</head>
+
+
+
+<MudCard Class="hero-card" Elevation="3">
+    <img src="images/4.jpg" alt="Hero Image" class="hero-image" />
+    <div class="hero-content" style="margin-left: 50px; margin-right: 20px ">
+        <img style="width:70px; height: 100px" src="images/ruhuna.png" class="front-image" />
+        <h1 style="color:black; font-weight:200; font-size: 25px">Welcome to the</h1>
+        <h1 style="color:black; font-weight:600">Faculty of Engineering,</h1>
+        <h1 style="color:black; font-weight:600">University of Ruhuna</h1>
+        <p style="color:slategrey; font-weight:300; font-size: 21px;">
+            Located nearby the beautiful Galle City, Southern Province in Sri Lanka, the Faculty of Engineering, University of Ruhuna provides excellent educational opportunities for students through teaching, research and professional practice.
+        </p>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="border-radius: 10px; padding: 10px 20px; background-color: {{Colors.DeepPurple.Accent3}}; color: white;">Sign in</MudButton>
+    </div>
+    <div class="hero-image-container">
+        <img src="images/1.jpg" class="front-image" />
+        <img src="images/2.jpg" class="front-image" />
+        <img src="images/3new.jpg" class="front-image" />
+    </div>
+</MudCard>
+
+<div class="dep-content" style="margin: 60px;margin-left:300px; text-align:center ">
+    <h1 style="color:black; font-weight:500;font-size:40px">Departments</h1>
+    <p style="color:slategrey; font-weight:300; font-size: 21px;">
+        Unlock your potential with our wide range of courses.
+    </p>
+</div>
+
+@if (Departments == null)
+{
+    <p>Loading departments...</p>
+}
+else
+{
+
+    <MudGrid style="padding: 90px; padding-top: 0px; justify-content: center; display: flex" Container="true">
+        @foreach (var department in Departments)
+        {
+            <MudItem xs="12" sm="6" md="4" Class="d-flex justify-content-center mud-item-spacing">
+                <MudCard class="dep_card">
+                    <img src="@department.ImageUrl" alt="@department.Name" style="width: 100%;" />
+                    <MudCardContent>
+                        <h3>@department.Name</h3>
+                        <p>@department.Description</p>
+                        <div class="ml-auto">
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="() => NavigateToDepartment(department.DepartmentId)" Class="depcard-button" Style="border-radius: 10px; padding: 10px 20px;">View</MudButton>
+                            </MudCardActions>
+                        </div>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+
+} 
+
+
+@code {
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    private HttpClient Http = new HttpClient();
+
+    private List<GetDepartmentResponse> Departments = new List<GetDepartmentResponse>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await LoadDepartments();
+        }
+        catch (Exception ex)
+        {
+            Departments = new List<GetDepartmentResponse>(); // Ensure departments is not null
+            // Handle the exception (log it, show a message, etc.)
+            Console.Error.WriteLine(ex.Message);
+            
+        }
+    }
+
+    private async Task LoadDepartments()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GetDepartmentResponse>>("https://localhost:7186/api/Department");
+            Departments = response ?? new List<GetDepartmentResponse>();
+        }
+        catch (Exception ex)
+        {
+            Departments = new List<GetDepartmentResponse>();
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private void NavigateToDepartment(Guid departmentId)
+    {
+        Navigation.NavigateTo($"/departments/{departmentId}");
+    }
+
+}
+
+<style>
+    .container {
+        overflow-x: hidden; /* Hide horizontal overflow */
+        width: 100%; /* Ensure content fits within viewport */
+    }
+
+    .hero-card {
+        color: #fff;
+        height: 660px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden; /* Ensure overflow content doesn't show */
+    }
+
+    .hero-content {
+        max-width: 60%;
+        padding: 0 20px;
+    }
+
+    .hero-image-container {
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 40%;
+        position: relative;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.2; /* Adjust opacity here */
+    }
+
+    .front-image {
+        height: 200px;
+        width: 400px;
+        margin: 15px;
+    }
+
+    .explore-button {
+        margin-top: 20px;
+    }
+
+    .dep_card {
+        width: 100%;
+        height: 480px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+        align-content: center;
+        text-align: center;
+    }
+
+        .dep_card h5,
+        .dep_card p,
+        .dep_card button, {
+            text-align: center; /* Aligns text content horizontally to the center */
+        }
+
+
+        .dep_card img {
+            padding: 10px;
+            border-radius: 15px;
+            height: 220px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .dep_card:hover img {
+            transform: scale(1.1);
+        }
+
+    .dep-content {
+        max-width: 60%;
+        padding: 0 20px;
+    }
+
+    .depcard-button {
+        border-radius: 10px;
+        padding: 10px 20px;
+        background-color: #7e57c2;
+        color: white;
+    }
+
+    .mud-item-spacing {
+        margin-bottom: 30px;
+    }
+
+</style>

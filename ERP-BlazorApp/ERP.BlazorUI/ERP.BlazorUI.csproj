@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Components\Pages\Requests\RequestsTabs.razor" />
+    <Content Remove="Components\Pages\ModuleRegistration\Sitehome.razor" />
     <Content Remove="wwwroot\images\1.jpg" />
     <Content Remove="wwwroot\images\2.jpg" />
     <Content Remove="wwwroot\images\3new.jpg" />
@@ -26,23 +26,19 @@
   <ItemGroup>
     <ProjectReference Include="..\Lib\ERP-Announcements\ERP-Announcements.csproj" />
     <ProjectReference Include="..\Lib\ERP-Feedbacks\ERP-Feedbacks.csproj" />
+    <ProjectReference Include="..\Lib\ERP-SiteHome\ERP-SiteHome.csproj" />
     <ProjectReference Include="..\Lib\ERP-StudentRegistration\ERP-StudentRegistration.csproj" />
     <ProjectReference Include="..\Lib\ERP-StudentRequests\ERP-StudentRequests.csproj" />
   </ItemGroup>
 
   
   <ItemGroup>
-    <UpToDateCheckInput Remove="Components\Pages\Requests\RequestsTabs.razor" />
+    <_ContentIncludedByDefault Remove="Components\Pages\ModuleRegistration\Sitehome.razor" />
   </ItemGroup>
 
   
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Components\Pages\Requests\RequestsTabs.razor" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <None Include="Components\Pages\Requests\RequestsTabs.razor" />
+    <None Include="Components\Pages\ModuleRegistration\Sitehome.razor" />
   </ItemGroup>
 
   
@@ -53,6 +49,11 @@
     <Resource Include="wwwroot\images\4.jpg" />
     <Resource Include="wwwroot\images\ruhuna.png" />
     <Resource Include="wwwroot\images\woman.png" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Pages\ModuleRegistration\Sitehome.razor" />
   </ItemGroup>
   
 </Project>

@@ -58,12 +58,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/ModuleRegistration/BatchesList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bGVSZWdpc3RyYXRpb25cQmF0Y2hlc0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/ModuleRegistration/DepartmentPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bGVSZWdpc3RyYXRpb25cRGVwYXJ0bWVudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Requests/RequestDetailsPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXF1ZXN0c1xSZXF1ZXN0RGV0YWlsc1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Pages/Requests/Requests.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXF1ZXN0c1xSZXF1ZXN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/6th Sem/Software Project/Main project/project 11/ERP-StudentPortal-Microservices/ERP-BlazorApp/ERP.BlazorUI/Components/Routes.razor]
