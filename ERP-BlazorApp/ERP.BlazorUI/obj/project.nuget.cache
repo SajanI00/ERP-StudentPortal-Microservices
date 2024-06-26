@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "48wHgL2xe+XpoytjtjGyutxYREFtLrlPde+Xyok5dBsfhJ+rQ1MS/3H/Ine/vxzeju7EPzuSsIbWB14O5E22LQ==",
+  "dgSpecHash": "3MBsufgz3AsH1O/4PySwiB6VfoGmGBLtDng4FuzFWYp6BXN6yMK24d4Ek4+pGP0aFP91DeoW50dG7KxzgsNsbQ==",
   "success": true,
-  "projectFilePath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
+  "projectFilePath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.6\\microsoft.aspnetcore.authorization.8.0.6.nupkg.sha512",

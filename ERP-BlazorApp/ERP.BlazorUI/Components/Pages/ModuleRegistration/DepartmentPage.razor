@@ -1,10 +1,10 @@
 ﻿ @page "/departments/{departmentId:guid}"
 @inject NavigationManager NavigationManager
 @using ERP_SiteHome.DTOs.Response;
-
+@rendermode InteractiveServer
 <PageTitle>@departmentName</PageTitle>
 
-@if (Department == null)
+    @if (Department == null)
 {
     <p>Loading department details...</p>
 }
@@ -16,45 +16,22 @@ else
         <div style="border-bottom: 2px solid darkblue; width: 100%; position: absolute; left: 0; right: 0; bottom: -12px;"></div>
     </div>
 
-   // <BatchesList DepartmentId=departmentId />
+                // <BatchesList DepartmentId=departmentId />
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Batches and Semesters</h5>
-                    </div>
-                    <div class="card-body">
-                        @if (Batches == null || Semesters == null)
-                        {
-                            <p>Loading batches and semesters...</p>
-                        }
-                        else
-                        {
-                            @foreach (var batch in Batches)
-                            {
-                                <div class="card mb-3">
-                                    <div class="card-header bg-info text-white">
-                                        <h6 class="mb-0">@batch.BatchName</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="list-group">
-                                            @foreach (var semester in Semesters)
-                                            {
-                                                var href = $"/departments/{departmentId}/{batch.BatchId}/{semester.SemesterId}";
-                                                <a href="@href" class="list-group-item list-group-item-action">@semester.SemesterName</a>
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <MudTreeView T="string">
+        @foreach (var batch in Batches)
+        {
+            <MudTreeViewItem Value="@batch.BatchName" @onclick="() => LoadSemesters(batch.BatchId)">
+                @if (BatchSemesters.ContainsKey(batch.BatchId))
+                {
+                    @foreach (var semester in BatchSemesters[batch.BatchId])
+                    {
+                        <MudTreeViewItem Value="@semester.SemesterName" />
+                    }
+                }
+            </MudTreeViewItem>
+        }
+    </MudTreeView>
 }
 
 @code {
@@ -71,48 +48,54 @@ else
     private string departmentName = "Department Details";
 
     private List<GetBatchResponse> Batches = new List<GetBatchResponse>();
-    private List<GetSemesterResponse> Semesters = new List<GetSemesterResponse>();
+    private Dictionary<Guid, List<GetSemesterResponse>> BatchSemesters = new Dictionary<Guid, List<GetSemesterResponse>>();
+    private Guid selectedBatchId;
 
     protected override async Task OnParametersSetAsync()
     {
         try
         {
-            Department = await Http.GetFromJsonAsync<GetDepartmentResponse>($"https://localhost:7186/api/Department/{departmentId}");
-            if (Department != null)
-            {
-                departmentName = Department.Name;
-                departmentId = Department.DepartmentId;
-            }
-            else
-            {
-                departmentName = "Department Not Found";
-            }
-            Batches = await Http.GetFromJsonAsync<List<GetBatchResponse>>($"https://localhost:7186/api/Batch/Departments/{departmentId}");
-            if (Batch != null)
-            {
-                batchId = Batch.BatchId;
-            }
-            await LoadSemester();
+            await LoadDepartment();
+            await LoadBatches();
         }
         catch (Exception ex)
         {
             Console.Error.WriteLine(ex.Message);
             departmentName = "Error Loading Department";
-            Batches = new List<GetBatchResponse>(); 
+            Batches = new List<GetBatchResponse>();
         }
     }
 
-    private async Task LoadSemester()
+    private async Task LoadDepartment()
     {
-        try
+        Department = await Http.GetFromJsonAsync<GetDepartmentResponse>($"https://localhost:7186/api/Department/{departmentId}");
+        if (Department != null)
         {
-            var response = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7186/api/Semester/Batches/{batchId}");
-            Semesters = response ?? new List<GetSemesterResponse>();
+            departmentName = Department.Name;
+            departmentId = Department.DepartmentId;
         }
-        catch (Exception ex)
+        else
         {
-            Semesters = new List<GetSemesterResponse>();
-            Console.WriteLine(ex.Message);
+            departmentName = "Department Not Found";
+        }
+
+    }
+
+    private async Task LoadBatches()
+    {
+        Batches = await Http.GetFromJsonAsync<List<GetBatchResponse>>($"https://localhost:7186/api/Batch/Departments/{departmentId}");
+
+    }
+
+    private async Task LoadSemesters(Guid batchId)
+    {
+        if (!BatchSemesters.ContainsKey(batchId))
+        {
+            var semesters = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7186/api/Semester/Batches/{batchId}");
+            BatchSemesters[batchId] = semesters ?? new List<GetSemesterResponse>();
+            StateHasChanged();
         }
     }
+
+
 }

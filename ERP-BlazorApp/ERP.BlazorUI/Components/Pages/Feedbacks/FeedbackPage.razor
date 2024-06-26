@@ -13,7 +13,7 @@
 <MudContainer Style="padding-right:40px;justify-content:center">
 
     <div style="padding-top: 20px;width: 80%">
-        <MudSelect Margin="Margin.Dense" T="GetLecturerResponse" Label="Lecturer" Variant="Variant.Outlined" @bind-Value="SelectedLecturer" OnValueChanged="async (string value) => await OnLecturerSelected(value)">
+        <MudSelect Margin="Margin.Dense" T="GetLecturerResponse" Label="Lecturer" Variant="Variant.Outlined" @bind-Value="SelectedLecturer" @onchange="OnLecturerSelected">
             @foreach (var lecturer in Lecturers)
             {
                 <MudSelectItem Value="@lecturer">@lecturer.Name</MudSelectItem>
@@ -21,22 +21,43 @@
         </MudSelect>
 
     </div>
+@*     <div style="padding-top: 20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="string" Label="Semester" Variant="Variant.Outlined" @bind-Value="SemesterName">
+            <MudSelectItem Value="@("Semester 1")" />
+            <MudSelectItem Value="@("Semester 2")" />
+            <MudSelectItem Value="@("Semester 3")" />
+            <MudSelectItem Value="@("Semester 4")" />
+            <MudSelectItem Value="@("Semester 6")" />
+            <MudSelectItem Value="@("Semester 7")" />
+            <MudSelectItem Value="@("Semester 8")" />
+        </MudSelect>
+    </div> *@
+
     <div style="padding-top: 20px;width: 80%">
         <MudSelect Margin="Margin.Dense" T="GetSemesterResponse" Label="Semester" Variant="Variant.Outlined" @bind-Value="SelectedSemester">
             @foreach (var semester in Semesters)
             {
-                <MudSelectItem Value="@semester.SemesterName" />
+                <MudSelectItem Value="@semester">@semester.SemesterName</MudSelectItem>
             }
         </MudSelect>
     </div>
-    <div style="padding-top:20px;width: 80%">
+
+    <div style="padding-top: 20px;width: 80%">
         <MudSelect Margin="Margin.Dense" T="GetModuleResponse" Label="Module" Variant="Variant.Outlined" @bind-Value="SelectedModule">
             @foreach (var module in Modules)
             {
-                <MudSelectItem Value="@module.ModuleName" />
+                <MudSelectItem Value="@module">@module.ModuleName</MudSelectItem>
             }
         </MudSelect>
     </div>
+@* 
+    <div style="padding-top: 20px;width: 80%">
+        <MudSelect Margin="Margin.Dense" T="string" Label="Module" Variant="Variant.Outlined" @bind-Value="ModuleName">
+            <MudSelectItem Value="@("Web Application Development")" />
+            <MudSelectItem Value="@("Artificial Intelligence")" />
+            <MudSelectItem Value="@("Machine Learning")" />
+        </MudSelect>
+    </div> *@
 
     <div style="padding-top: 20px;width: 80%">
         <MudSelect Margin="Margin.Dense" T="string" Label="Department" Variant="Variant.Outlined" @bind-Value="Department">
@@ -142,9 +163,13 @@
 @code {
     private List<int> ratings = new List<int>(new int[15]);
     private string ModuleName ;
-    private string Semester;
+    private string SemesterName;
     private string Department;
     private string OverallFeedback;
+    private Guid ModuleId;
+    private Guid SemesterId;
+
+
 
     private HttpClient Http = new HttpClient();
     private CreateFeedbackRequest feedback = new CreateFeedbackRequest();
@@ -161,6 +186,18 @@
     protected override async Task OnInitializedAsync()
     {
         await LoadLecturers();
+        await LoadModules();
+        await LoadSemesters();
+        // if (SelectedModule == null)
+        // {
+        //     Snackbar.Add("Modules could not be loaded.", Severity.Error);
+        //     return;
+        // }
+        // if (SelectedSemester == null)
+        // {
+        //     Snackbar.Add("Semesters could not be loaded.", Severity.Error);
+        //     return;
+        // }
     }
 
     private async Task LoadLecturers()
@@ -178,47 +215,90 @@
         }
     }
 
-    private async Task OnLecturerSelected(GetLecturerResponse lecturer)
+    private async Task OnLecturerSelected()
     {
-        if (lecturer != null)
+        if (SelectedLecturer != null)
         {
-            SelectedLecturer = lecturer;
+            await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
         }
-
-        await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
     }
 
-    
     private async Task LoadModulesAndSemesters(Guid lecturerId)
     {
-        var lecturer = Lecturers.FirstOrDefault(l => l.LecturerId == lecturerId);
-        if (lecturer != null)
+        try
         {
-            try
-            {
-                var modules = await Http.GetFromJsonAsync<List<GetModuleResponse>>($"https://localhost:7029/api/LecturersModules/Lecturers/{lecturerId}");
-                Modules = modules ?? new List<GetModuleResponse>();
+            var modulesResponse = await Http.GetFromJsonAsync<List<GetModuleResponse>>($"https://localhost:7029/api/LecturersModules/Lecturers/{lecturerId}");
+            Modules = modulesResponse ?? new List<GetModuleResponse>();
 
-                var semesters = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7029/api/LecturersSemesters/Lecturers/{lecturerId}");
-                Semesters = semesters ?? new List<GetSemesterResponse>();
-            }
-            catch (Exception ex)
-            {
-                Modules = new List<GetModuleResponse>();
-                Semesters = new List<GetSemesterResponse>();
-            }
+            var semestersResponse = await Http.GetFromJsonAsync<List<GetSemesterResponse>>($"https://localhost:7029/api/LecturersSemesters/Lecturers/{lecturerId}");
+            Semesters = semestersResponse ?? new List<GetSemesterResponse>();
         }
+        catch (Exception ex)
+        {
+            Modules = new List<GetModuleResponse>();
+            Semesters = new List<GetSemesterResponse>();
+            Console.WriteLine(ex.Message);
+        }
+    }
 
-        StateHasChanged();
+    private async Task LoadModules()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GetModuleResponse>>("https://localhost:7029/api/Module");
+            Modules = response ?? new List<GetModuleResponse>();
+
+        }
+        catch (Exception ex)
+        {
+            Modules = new List<GetModuleResponse>();
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async Task LoadSemesters()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GetSemesterResponse>>("https://localhost:7029/api/Semester");
+            Semesters = response ?? new List<GetSemesterResponse>();
+
+        }
+        catch (Exception ex)
+        {
+            Semesters = new List<GetSemesterResponse>();
+            Console.WriteLine(ex.Message);
+        }
     }
 
 
 
     private async Task SubmitFeedback()
     {
-        // Load modules and semesters based on selected lecturer
-        await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
+        // Check if SelectedLecturer is null
+        if (SelectedLecturer == null)
+        {
+            // Handle the error condition, perhaps show a message to the user
+            Snackbar.Add("Please select a lecturer.", Severity.Error);
+            return;
+        }
 
+        // Load modules and semesters based on selected lecturer if SelectedModule or SelectedSemester is null
+        // if (SelectedModule == null || SelectedSemester == null)
+        // {
+        //     await LoadModulesAndSemesters(SelectedLecturer.LecturerId);
+        // }
+
+        // // Check again if SelectedModule or SelectedSemester is still null after loading
+        // if (SelectedModule == null || SelectedSemester == null)
+        // {
+        //     Snackbar.Add("Modules and semesters could not be loaded.", Severity.Error);
+        //     return;
+        // }
+
+
+
+        // Create the feedback object
         var feedback = new CreateFeedbackRequest()
             {
                 LecturerId = SelectedLecturer.LecturerId,
@@ -247,10 +327,27 @@
                 OverallFeedback = OverallFeedback
             };
 
-        var response = await Http.PostAsJsonAsync("https://localhost:7029/api/Feedback", feedback);
+        try
+        {
+            // Send feedback data to server
+            var response = await Http.PostAsJsonAsync("https://localhost:7029/api/Feedback", feedback);
 
-        Snackbar.Add("Feedback submitted successfully!", Severity.Success);
+            // Check response status
+            if (response.IsSuccessStatusCode)
+            {
+                Snackbar.Add("Feedback submitted successfully!", Severity.Success);
+            }
+            else
+            {
+                Snackbar.Add("Failed to submit feedback. Please try again later.", Severity.Error);
+            }
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error submitting feedback: {ex.Message}", Severity.Error);
+        }
     }
+
 
 
 }

@@ -846,11 +846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
+      "projectUniqueName": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
       "projectName": "ERP.BlazorUI",
-      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
+      "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\ERP.BlazorUI.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\obj\\",
+      "outputPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\ERP.BlazorUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -867,20 +867,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Announcements\\ERP-Announcements.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Announcements\\ERP-Announcements.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Announcements\\ERP-Announcements.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Announcements\\ERP-Announcements.csproj"
             },
-            "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Feedbacks\\ERP-Feedbacks.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Feedbacks\\ERP-Feedbacks.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Feedbacks\\ERP-Feedbacks.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-Feedbacks\\ERP-Feedbacks.csproj"
             },
-            "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-SiteHome\\ERP-SiteHome.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-SiteHome\\ERP-SiteHome.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-SiteHome\\ERP-SiteHome.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-SiteHome\\ERP-SiteHome.csproj"
             },
-            "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRegistration\\ERP-StudentRegistration.csproj"
             },
-            "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj": {
-              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj"
+            "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj": {
+              "projectPath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BlazorApp\\Lib\\ERP-StudentRequests\\ERP-StudentRequests.csproj"
             }
           }
         }

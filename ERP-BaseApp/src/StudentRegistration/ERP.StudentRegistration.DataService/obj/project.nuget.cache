@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2ZnX2aqCu3ZhOySa56LiqbPhXfVmGLAq+vyCq8dN7msSiNTvW+KbrLvcJE1SB9aICXxm42AypMbpmcjQRqhxRw==",
+  "dgSpecHash": "YGyybuqUZMAdO3JEKu0WZWGuaig9gjqNowfvoq4y26+Zu9jaU+BGEgyP+u8zz47p5KBeNRH+h1hANxZOz9cexw==",
   "success": true,
-  "projectFilePath": "D:\\6th Sem\\Software Project\\Main project\\project 11\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj",
+  "projectFilePath": "D:\\6th Sem\\Software Project\\Main project\\project 13\\ERP-StudentPortal-Microservices\\ERP-BaseApp\\src\\StudentRegistration\\ERP.StudentRegistration.DataService\\ERP.StudentRegistration.DataService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
